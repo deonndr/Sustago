@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SustaGo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ocean: {
+              950: '#0a1628',
+              900: '#0f2044',
+              800: '#1a3460',
+              700: '#1e4080',
+              600: '#1e56a0',
+              500: '#2271c3',
+              400: '#4a90d9',
+              300: '#7ab3e8',
+              200: '#b3d4f5',
+              100: '#deeeff',
+              50:  '#f0f7ff',
+            },
+            accent: {
+              500: '#f59e0b',
+              400: '#fbbf24',
+            },
+            eco: {
+              600: '#16a34a',
+              500: '#22c55e',
+              100: '#dcfce7',
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          backgroundImage: {
+            'hero-gradient': 'linear-gradient(135deg, rgba(10,22,40,0.85) 0%, rgba(30,64,128,0.65) 50%, rgba(10,22,40,0.4) 100%)',
+          }
+        }
+      }
+    }
+  </script>
+ 
+</head>
+<body class="bg-slate-50">
+
+<!-- NAVBAR -->
+<section id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 nav-scrolled">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <div class="w-8 h-8 bg-ocean-700 rounded-full flex items-center justify-center">
+          <i class="fa-solid fa-location-dot text-white text-sm"></i>
+        </div>
+        <div>
+          <span class="font-heading font-800 text-ocean-900 text-xl font-extrabold tracking-tight">Susta</span><span class="font-heading font-800 text-accent-500 text-xl font-extrabold">Go</span>
+          <div class="text-[9px] text-slate-400 font-body leading-none -mt-0.5">Travel Smart, Impact Together</div>
+        </div>
+      </div>
+
+
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#hero" class="text-sm font-medium text-ocean-900 hover:text-ocean-600 transition-colors">Beranda</a>
+        <a href="#destinations" class="text-sm font-medium text-slate-600 hover:text-ocean-600 transition-colors">Jelajahi</a>
+        <a href="#cta-planner" class="text-sm font-medium text-slate-600 hover:text-ocean-600 transition-colors">Planner</a>
+        <a href="#articles" class="text-sm font-medium text-slate-600 hover:text-ocean-600 transition-colors">Artikel</a>
+        <a href="#features" class="text-sm font-medium text-slate-600 hover:text-ocean-600 transition-colors">Komunitas</a>
+        <a href="#footer" class="text-sm font-medium text-slate-600 hover:text-ocean-600 transition-colors">Tentang Kami</a>
+      </div>
+
+   
+      <div class="hidden md:flex items-center gap-3">
+        <button class="w-9 h-9 flex items-center justify-center text-slate-500 hover:text-ocean-700 hover:bg-ocean-50 rounded-full transition-colors">
+          <i class="fa-solid fa-magnifying-glass text-sm"></i>
+        </button>
+        <button class="w-9 h-9 flex items-center justify-center text-slate-500 hover:text-ocean-700 hover:bg-ocean-50 rounded-full transition-colors">
+          <i class="fa-solid fa-bell text-sm"></i>
+        </button>
+        <div class="w-px h-5 bg-slate-200 mx-1"></div>
+        <button class="text-sm font-semibold text-ocean-700 hover:text-ocean-900 transition-colors">Masuk</button>
+        <button class="px-4 py-2 bg-ocean-700 hover:bg-ocean-800 text-white text-sm font-semibold rounded-lg transition-colors">
+          Daftar
+        </button>
+      </div>
+
+      <button id="hamburger-btn" class="md:hidden w-9 h-9 flex items-center justify-center text-slate-600 hover:text-ocean-700">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </button>
+    </div>
+  </div>
+
+
+  <div id="mobile-menu" class="md:hidden flex-col bg-white border-t border-slate-100 px-4 pb-4 gap-1">
+    <a href="#hero"         class="block py-2.5 text-sm font-medium text-ocean-900 border-b border-slate-50">Beranda</a>
+    <a href="#destinations" class="block py-2.5 text-sm font-medium text-slate-600 border-b border-slate-50">Jelajahi</a>
+    <a href="#cta-planner"  class="block py-2.5 text-sm font-medium text-slate-600 border-b border-slate-50">Planner</a>
+    <a href="#articles"     class="block py-2.5 text-sm font-medium text-slate-600 border-b border-slate-50">Artikel</a>
+    <a href="#footer"       class="block py-2.5 text-sm font-medium text-slate-600">Tentang Kami</a>
+    <div class="flex gap-3 mt-3">
+      <button class="flex-1 py-2 border border-ocean-700 text-ocean-700 text-sm font-semibold rounded-lg">Masuk</button>
+      <button class="flex-1 py-2 bg-ocean-700 text-white text-sm font-semibold rounded-lg">Daftar</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- JAVASCRIPT -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
