@@ -25,7 +25,7 @@
     </head>
     <body class="bg-slate-50">
       <!-- NAVBAR -->
-      <section id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-scrolled">
+      <section id="navbar" class="absolute top-0 left-0 right-0 z-50 ">
         <div class="mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex items-center justify-between h-20">
             <div class="flex items-center gap-2 flex-shrink-0">
@@ -106,7 +106,7 @@
               id="hamburger-btn"
               class="lg:hidden w-9 h-9 flex items-center justify-center text-slate-600 hover:text-ocean-700"
             >
-              <i class="fa-solid fa-bars text-lg"></i>
+              <i class="fa-solid fa-bars text-lg text-white"></i>
             </button>
           </div>
         </div>
@@ -155,7 +155,7 @@
         </div>
       </section>
 
-      <section id="hero" class="hero-bg min-h-screen flex items-center pt-16">
+      <section id="hero" class="relative hero-bg min-h-screen flex items-center pt-16">
         <div
           class="hero-overlay absolute inset-0 pt-16 pointer-events-none"
         ></div>
@@ -279,8 +279,9 @@
           </div>
         </div>
 
-        <div class="absolute bottom-0 left-0 right-0">
+        <div class="absolute bottom-[-1px] left-0 right-0">
           <svg
+            class="w-full h-[40px] md:h-[60px]"
             viewBox="0 0 1440 60"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
