@@ -20,7 +20,6 @@ body {
   border-right: none;
 }
 
-
 .cta-bg {
   background: linear-gradient(135deg, #0f2044 0%, #1e56a0 55%, #2271c3 100%);
 }
@@ -107,5 +106,16 @@ html {
 @media (max-width: 639px) {
   .search-bar-hero {
     padding: 1rem;
+  }
+}
+
+/* untuk samsung */
+@media (max-width: 360px) {
+  section#hero > div {
+    padding-top: 8px;
+  }
+
+  section#hero > div > .flex {
+    gap: 0;
   }
 }
