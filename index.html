@@ -1,376 +1,224 @@
-  <!doctype html>
-  <html lang="id">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>SustaGo</title>
+<!doctype html>
+<html lang="id">
 
-      <!-- sc tailwind -->
-      <script src="https://cdn.tailwindcss.com"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SustaGo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
 
-      <!-- sc font awesome -->
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="js/tailwind.config.js"></script>
+</head>
 
-      <!-- sc font plus jakarta sans & inter -->
-      <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet"
-      />
+<body class="bg-white">
+  <!-- NAVBAR -->
+  <section id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center gap-1 flex-shrink-0">
+          <img src="assets/img/logo3.svg" alt="Sustago Logo" class="h-8" />
+        </div>
+        <!-- nav link nya -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#hero"
+            class="text-sm font-semibold text-ocean-900 hover:text-ocean-600 transition-colors">Beranda</a>
+          <a href="#planner"
+            class="text-sm font-medium text-slate-700 hover:text-ocean-600 transition-colors">Planner</a>
+          <a href="#artikel"
+            class="text-sm font-medium text-slate-700 hover:text-ocean-600 transition-colors">Artikel</a>
+          <a href="#komunitas"
+            class="text-sm font-medium text-slate-700 hover:text-ocean-600 transition-colors">Komunitas</a>
+          <a href="#tentang-kami"
+            class="text-sm font-medium text-slate-700 hover:text-ocean-600 transition-colors">Tentang Kami</a>
+        </div>
 
-      <link rel="stylesheet" href="styles/main.css" />
-      <script src="js/tailwind.config.js"></script>
-    </head>
-    <body class="bg-slate-50">
-      <!-- NAVBAR -->
-      <section id="navbar" class="absolute top-0 left-0 right-0 z-50 ">
-        <div class="mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex items-center justify-between h-20">
-            <div class="flex items-center gap-2 flex-shrink-0">
-              <div class="w-8 h-8 rounded-full flex items-center justify-center">
-                <!-- <i class="fa-solid fa-location-dot text-white text-sm"></i> -->
-              </div>
-              <div>
-                <span
-                  class="font-heading font-800 text-ocean-900 text-xl font-extrabold tracking-tight"
-                  >Susta</span
-                ><span
-                  class="font-heading font-800 text-accent-500 text-xl font-extrabold"
-                  >Go</span
-                >
-                <!-- <div class="text-[9px] text-slate-400 font-body leading-none -mt-0.5">Travel Smart, Impact Together</div> -->
-              </div>
+        <div class="hidden lg:flex items-center gap-4">
+          <button
+            class="w-9 h-9 flex items-center justify-center text-ocean-900 hover:text-ocean-600 rounded-full transition-all duration-300">
+            <i class="fa-regular fa-bell text-lg"></i>
+          </button>
+
+          <button
+            class="w-9 h-9 flex items-center justify-center rounded-full bg-ocean-100 text-ocean-700 transition-all duration-300">
+            <i class="fa-regular fa-user text-sm"></i>
+          </button>
+
+          <button
+            class="px-6 py-2.5 border-2 border-ocean-900 text-ocean-900 text-sm font-bold rounded-lg hover:bg-ocean-900 hover:text-white transition-all duration-300">
+            Masuk
+          </button>
+        </div>
+
+        <!-- burger button-->
+        <button id="hamburger-btn"
+          class="lg:hidden w-9 h-9 flex items-center justify-center text-slate-600 hover:text-ocean-700">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="lg:hidden flex-col bg-white border-t border-slate-100 px-4 pb-4 gap-1">
+      <a href="#hero" class="block py-2.5 text-sm font-medium text-ocean-900 border-b border-slate-50">Beranda</a>
+      <a href="#planner" class="block py-2.5 text-sm font-medium text-slate-600 border-b border-slate-50">Planner</a>
+      <a href="#artikel" class="block py-2.5 text-sm font-medium text-slate-600 border-b border-slate-50">Artikel</a>
+      <a href="#komunitas"
+        class="block py-2.5 text-sm font-medium text-slate-600 border-b border-slate-50">Komunitas</a>
+      <a href="#tentang-kami" class="block py-2.5 text-sm font-medium text-slate-600">Tentang Kami</a>
+      <div class="flex gap-3 mt-3">
+        <button class="flex-1 py-2 border-2 border-ocean-900 text-ocean-900 text-sm font-semibold rounded-full">
+          Masuk
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative bg-white min-h-screen pt-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-16 pb-8">
+      <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-4">
+
+
+        <div class="w-full lg:w-[42%] z-10 fade-up delay-1">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 bg-white shadow-lg rounded-xl px-5 py-2.5 mb-8">
+            <span class="text-sm font-semibold text-ocean-900">Jelajahi Dunia</span>
+            <span class="fa-solid fa-compass text-lg "></span>
+          </div>
+          <!-- bagian text hero section -->
+          <h1
+            class="font-heading text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold text-ocean-900 leading-[1.15] mb-6">
+            Jelajahi Berkelanjutan<br />
+            <span class="text-accent-500">Dukung Lokal</span><br />
+            Jaga bumi
+          </h1>
+          <p class="text-black text-base sm:text-lg leading-relaxed mb-10 max-w-lg">
+            Temukan destinasi ramah lingkungan, nikmati keindahan alam dan budaya lokal, serta dukung UMKM di setiap
+            perjalanan
+          </p>
+        </div>
+
+        <!-- hero imagenya -->
+        <div class="w-full lg:w-[58%] relative fade-up delay-2">
+          <div class="hero-image-grid">
+            <img src="assets/img/hero.svg" alt="Hero destinations" class="w-full h-auto scale-110 origin-center" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="relative z-10 mt-4 lg:mt-8 fade-up delay-3">
+        <div
+          class="search-bar-hero bg-white rounded-2xl shadow-[0_4px_40px_rgba(0,0,0,0.08)] border border-slate-100 px-5 sm:px-8 py-4">
+          <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+        
+            <div class="flex items-center gap-3 flex-1 w-full sm:w-auto">
+              <i class="fa-solid fa-magnifying-glass text-slate-400 text-base"></i>
+              <input type="text" placeholder="Cari destinasi, kegiatan atau produk lokal"
+                class="w-full text-sm text-slate-600 placeholder-slate-400 outline-none bg-transparent font-medium" />
             </div>
 
-            <div class="hidden lg:flex items-center gap-6">
-              <a
-                href="#hero"
-                class="text-sm font-medium text-ocean-900 hover:text-ocean-600 transition-colors"
-                >Beranda</a
-              >
-              <a
-                href="#jelajahi"
-                class="text-sm font-medium text-slate-50 hover:text-ocean-600 transition-colors"
-                >Jelajahi</a
-              >
-              <a
-                href="#planner"
-                class="text-sm font-medium text-slate-50 hover:text-ocean-600 transition-colors"
-                >Planner</a
-              >
-              <a
-                href="#artikel"
-                class="text-sm font-medium text-slate-50 hover:text-ocean-600 transition-colors"
-                >Artikel</a
-              >
-              <a
-                href="#komunitas"
-                class="text-sm font-medium text-slate-50 hover:text-ocean-600 transition-colors"
-                >Komunitas</a
-              >
-              <a
-                href="#tentang-kami"
-                class="text-sm font-medium text-slate-50 hover:text-ocean-600 transition-colors"
-                >Tentang Kami</a
-              >
-            </div>
-
-            <div class="hidden lg:flex items-center gap-3">
+          <!-- menu fitur search bar -->
+            <div class="flex items-center gap-5 flex-wrap sm:flex-nowrap">
               <button
-                class="w-9 h-9 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300"
-              >
-                <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                class="flex items-center gap-2 text-ocean-900 hover:text-ocean-600 transition-colors whitespace-nowrap">
+                <i class="fa-solid fa-location-dot text-sm text-black"></i>
+                <span class="text-sm font-medium text-black">Lokasi Saya</span>
               </button>
 
               <button
-                class="w-9 h-9 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 rounded-full transition-all duration-300"
-              >
-                <i class="fa-solid fa-bell text-sm"></i>
+                class="flex items-center gap-2 text-ocean-900 hover:text-ocean-600 transition-colors whitespace-nowrap">
+                <i><img src="assets/img/billing.svg" alt=""></i>
+                <span class="text-sm font-medium text-black">Budget</span>
               </button>
-              <div class="w-px h-5 bg-slate-200 mx-1"></div>
+
               <button
-                class="text-sm font-semibold text-ocean-700 hover:text-ocean-900 transition-colors"
-              >
-                Masuk
+                class="flex items-center gap-2 text-ocean-900 hover:text-ocean-600 transition-colors whitespace-nowrap">
+                <i><img src="assets/img/plant.svg" alt=""></i>
+                <span class="text-sm font-medium text-black">Planner</span>
               </button>
+
               <button
-                class="px-4 py-2 bg-ocean-700 hover:bg-ocean-800 text-white text-sm font-semibold rounded-lg transition-colors"
-              >
-                Daftar
+                class="flex items-center gap-2 text-ocean-900 hover:text-ocean-600 transition-colors whitespace-nowrap">
+                <i ><img src="assets/img/daun.svg" alt=""></i>
+                <span class="text-sm font-medium text-black">Eco Score</span>
               </button>
             </div>
 
             <button
-              id="hamburger-btn"
-              class="lg:hidden w-9 h-9 flex items-center justify-center text-slate-600 hover:text-ocean-700"
-            >
-              <i class="fa-solid fa-bars text-lg text-white"></i>
+              class="w-full sm:w-auto px-10 py-3 bg-ocean-900 hover:bg-ocean-800 text-white font-bold rounded-xl text-sm transition-all duration-300 shadow-lg shadow-ocean-900/20 hover:shadow-ocean-900/40 whitespace-nowrap">
+              Jelajah
             </button>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div
-          id="mobile-menu"
-          class="lg:hidden flex-col bg-white border-t border-slate-100 px-4 pb-4 gap-1"
-        >
-          <a
-            href="#hero"
-            class="block py-2.5 text-sm font-medium text-ocean-900 border-b border-slate-50"
-            >Beranda</a
-          >
-          <a
-            href="#destinations"
-            class="block py-2.5 text-sm font-medium text-slate-600 border-b border-slate-50"
-            >Jelajahi</a
-          >
-          <a
-            href="#cta-planner"
-            class="block py-2.5 text-sm font-medium text-slate-600 border-b border-slate-50"
-            >Planner</a
-          >
-          <a
-            href="#articles"
-            class="block py-2.5 text-sm font-medium text-slate-600 border-b border-slate-50"
-            >Artikel</a
-          >
-          <a
-            href="#footer"
-            class="block py-2.5 text-sm font-medium text-slate-600"
-            >Tentang Kami</a
-          >
-          <div class="flex gap-3 mt-3">
-            <button
-              class="flex-1 py-2 border border-ocean-700 text-ocean-700 text-sm font-semibold rounded-lg"
-            >
-              Masuk
-            </button>
-            <button
-              class="flex-1 py-2 bg-ocean-700 text-white text-sm font-semibold rounded-lg"
-            >
-              Daftar
-            </button>
+  <!-- STATISTIK -->
+  <section id="stats" class="bg-slate-50 py-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+        <div class="grid grid-cols-2 md:grid-cols-4">
+          <div class="stat-item flex flex-col items-center py-6 px-4 text-center">
+            <div class="w-10 h-10 bg-ocean-100 rounded-xl flex items-center justify-center mb-3">
+              <i class="fa-solid fa-map-location-dot text-ocean-600"></i>
+            </div>
+            <div class="font-heading font-extrabold text-2xl text-ocean-900">
+              500+
+            </div>
+            <div class="text-xs text-slate-500 font-medium mt-0.5">
+              Destinasi Eco
+            </div>
           </div>
-        </div>
-      </section>
 
-      <section id="hero" class="relative hero-bg min-h-screen flex items-center pt-16">
-        <div
-          class="hero-overlay absolute inset-0 pt-16 pointer-events-none"
-        ></div>
-        <div
-          class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full"
-        >
-          <div class="max-w-2xl">
-            <!-- Heading -->
-            <h1
-              class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 fade-up delay-1"
-            >
-              Jelajah Berkelanjutan,<br />
-              Dukung <span class="text-accent-400">Lokal</span>,<br />
-              Jaga Bumi
-            </h1>
+          <div class="stat-item flex flex-col items-center py-6 px-4 text-center">
+            <div class="w-10 h-10 bg-accent-400/20 rounded-xl flex items-center justify-center mb-3">
+              <i class="fa-solid fa-store text-amber-600"></i>
+            </div>
+            <div class="font-heading font-extrabold text-2xl text-ocean-900">
+              1.200+
+            </div>
+            <div class="text-xs text-slate-500 font-medium mt-0.5">
+              UMKM Lokal
+            </div>
+          </div>
 
-            <p
-              class="text-blue-100 text-base sm:text-lg leading-relaxed mb-10 max-w-lg fade-up delay-2"
-            >
-              Temukan destinasi ramah lingkungan, nikmati keindahan alam dan
-              budaya lokal, serta dukung UMKM di setiap perjalanan.
-            </p>
+          <div class="stat-item flex flex-col items-center py-6 px-4 text-center">
+            <div class="w-10 h-10 bg-ocean-100 rounded-xl flex items-center justify-center mb-3">
+              <i class="fa-solid fa-users text-ocean-600"></i>
+            </div>
+            <div class="font-heading font-extrabold text-2xl text-ocean-900">
+              20K+
+            </div>
+            <div class="text-xs text-slate-500 font-medium mt-0.5">
+              Pengguna Aktif
+            </div>
+          </div>
 
-            <div
-              class="search-form rounded-2xl shadow-2xl p-4 sm:p-5 fade-up delay-3"
-            >
-              <div
-                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-4"
-              >
-                <!-- Lokasi -->
-                <div
-                  class="flex items-center gap-3 border border-slate-200 rounded-xl px-3 py-3 hover:border-ocean-400 transition-colors cursor-pointer bg-slate-50"
-                >
-                  <div
-                    class="w-8 h-8 bg-ocean-100 rounded-lg flex items-center justify-center flex-shrink-0"
-                  >
-                    <i
-                      class="fa-solid fa-location-dot text-ocean-600 text-sm"
-                    ></i>
-                  </div>
-                  <div class="min-w-0">
-                    <div
-                      class="text-[10px] text-slate-400 font-medium uppercase tracking-wide"
-                    >
-                      Lokasi Tujuan
-                    </div>
-                    <div class="text-sm font-semibold text-slate-700">
-                      Mau ke mana?
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Budget -->
-                <div
-                  class="flex items-center gap-3 border border-slate-200 rounded-xl px-3 py-3 hover:border-ocean-400 transition-colors cursor-pointer bg-slate-50"
-                >
-                  <div
-                    class="w-8 h-8 bg-ocean-100 rounded-lg flex items-center justify-center flex-shrink-0"
-                  >
-                    <i class="fa-solid fa-wallet text-ocean-600 text-sm"></i>
-                  </div>
-                  <div class="min-w-0">
-                    <div
-                      class="text-[10px] text-slate-400 font-medium uppercase tracking-wide"
-                    >
-                      Budget
-                    </div>
-                    <div class="text-sm font-semibold text-slate-700">
-                      Semua budget
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="flex items-center gap-3 border border-slate-200 rounded-xl px-3 py-3 hover:border-ocean-400 transition-colors cursor-pointer bg-slate-50"
-                >
-                  <div
-                    class="w-8 h-8 bg-eco-100 rounded-lg flex items-center justify-center flex-shrink-0"
-                  >
-                    <i class="fa-solid fa-leaf text-eco-600 text-sm"></i>
-                  </div>
-                  <div class="min-w-0">
-                    <div
-                      class="text-[10px] text-slate-400 font-medium uppercase tracking-wide"
-                    >
-                      Eco Score
-                    </div>
-                    <div class="text-sm font-semibold text-slate-700">
-                      Pilih skor eco
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="flex items-center gap-3 border border-slate-200 rounded-xl px-3 py-3 hover:border-ocean-400 transition-colors cursor-pointer bg-slate-50"
-                >
-                  <div
-                    class="w-8 h-8 bg-ocean-100 rounded-lg flex items-center justify-center flex-shrink-0"
-                  >
-                    <i class="fa-solid fa-van-shuttle text-ocean-600 text-sm"></i>
-                  </div>
-                  <div class="min-w-0">
-                    <div
-                      class="text-[10px] text-slate-400 font-medium uppercase tracking-wide"
-                    >
-                      Transportasi
-                    </div>
-                    <div class="text-sm font-semibold text-slate-700">
-                      Semua moda
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="w-full sm:w-auto px-8 py-3.5 bg-ocean-700 hover:bg-ocean-800 text-white font-bold rounded-xl text-sm flex items-center justify-center gap-2 transition-all shadow-lg shadow-ocean-700/30 hover:shadow-ocean-700/50"
-              >
-                <i class="fa-solid fa-magnifying-glass"></i>
-                Jelajahi Sekarang
-              </button>
+          <div class="stat-item flex flex-col items-center py-6 px-4 text-center">
+            <div class="w-10 h-10 bg-eco-100 rounded-xl flex items-center justify-center mb-3">
+              <i class="fa-solid fa-cloud text-eco-600"></i>
+            </div>
+            <div class="font-heading font-extrabold text-2xl text-ocean-900">
+              12 Ton
+            </div>
+            <div class="text-xs text-slate-500 font-medium mt-0.5">
+              CO₂ Terukur
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="absolute bottom-[-1px] left-0 right-0">
-          <svg
-            class="w-full h-[40px] md:h-[60px]"
-            viewBox="0 0 1440 60"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0 60L60 50C120 40 240 20 360 15C480 10 600 20 720 28C840 36 960 42 1080 40C1200 38 1320 28 1380 23L1440 18V60H1380C1320 60 1200 60 1080 60C960 60 840 60 720 60C600 60 480 60 360 60C240 60 120 60 60 60H0Z"
-              fill="#f8fafc"
-            />
-          </svg>
-        </div>
-      </section>
+  <!-- JAVASCRIPT -->
+  <script src="js/main.js"></script>
+</body>
 
-      <!-- STATISTIK -->
-      <section id="stats" class="bg-slate-50 py-8">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden"
-          >
-            <div class="grid grid-cols-2 md:grid-cols-4">
-              <div
-                class="stat-item flex flex-col items-center py-6 px-4 text-center"
-              >
-                <div
-                  class="w-10 h-10 bg-ocean-100 rounded-xl flex items-center justify-center mb-3"
-                >
-                  <i class="fa-solid fa-map-location-dot text-ocean-600"></i>
-                </div>
-                <div class="font-heading font-extrabold text-2xl text-ocean-900">
-                  500+
-                </div>
-                <div class="text-xs text-slate-500 font-medium mt-0.5">
-                  Destinasi Eco
-                </div>
-              </div>
-
-              <div
-                class="stat-item flex flex-col items-center py-6 px-4 text-center"
-              >
-                <div
-                  class="w-10 h-10 bg-accent-400/20 rounded-xl flex items-center justify-center mb-3"
-                >
-                  <i class="fa-solid fa-store text-amber-600"></i>
-                </div>
-                <div class="font-heading font-extrabold text-2xl text-ocean-900">
-                  1.200+
-                </div>
-                <div class="text-xs text-slate-500 font-medium mt-0.5">
-                  UMKM Lokal
-                </div>
-              </div>
-
-              <div
-                class="stat-item flex flex-col items-center py-6 px-4 text-center"
-              >
-                <div
-                  class="w-10 h-10 bg-ocean-100 rounded-xl flex items-center justify-center mb-3"
-                >
-                  <i class="fa-solid fa-users text-ocean-600"></i>
-                </div>
-                <div class="font-heading font-extrabold text-2xl text-ocean-900">
-                  20K+
-                </div>
-                <div class="text-xs text-slate-500 font-medium mt-0.5">
-                  Pengguna Aktif
-                </div>
-              </div>
-
-              <div
-                class="stat-item flex flex-col items-center py-6 px-4 text-center"
-              >
-                <div
-                  class="w-10 h-10 bg-eco-100 rounded-xl flex items-center justify-center mb-3"
-                >
-                  <i class="fa-solid fa-cloud text-eco-600"></i>
-                </div>
-                <div class="font-heading font-extrabold text-2xl text-ocean-900">
-                  12 Ton
-                </div>
-                <div class="text-xs text-slate-500 font-medium mt-0.5">
-                  CO₂ Terukur
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- JAVASCRIPT -->
-      <script src="js/main.js"></script>
-    </body>
-  </html>
+</html>
