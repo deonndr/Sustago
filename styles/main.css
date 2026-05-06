@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: "Plus Jakarta Sans", "Inter", sans-serif;
   color: #1a2942;
@@ -16,6 +17,7 @@ body {
 .stat-item {
   border-right: 1px solid #e2eaf4;
 }
+
 .stat-item:last-child {
   border-right: none;
 }
@@ -36,10 +38,32 @@ body {
 
 /* Navbar mobile toggle */
 #mobile-menu {
-  display: none;
-}
-#mobile-menu.open {
   display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease,
+    padding 0.3s ease;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#mobile-menu.open {
+  max-height: 400px;
+  opacity: 1;
+  padding-bottom: 1rem;
+}
+
+/* animasi burger button */
+#hamburger-btn i {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+
+#hamburger-btn.is-open i {
+  transform: rotate(90deg);
 }
 
 /* Smooth scroll */
@@ -52,6 +76,7 @@ html {
   background: #1e56a0;
   color: #fff;
 }
+
 .pill-inactive {
   background: #f0f7ff;
   color: #1e4080;
@@ -63,22 +88,27 @@ html {
     opacity: 0;
     transform: translateY(24px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 .fade-up {
   animation: fadeUp 0.6s ease forwards;
 }
+
 .delay-1 {
   animation-delay: 0.1s;
   opacity: 0;
 }
+
 .delay-2 {
   animation-delay: 0.25s;
   opacity: 0;
 }
+
 .delay-3 {
   animation-delay: 0.4s;
   opacity: 0;
@@ -106,16 +136,18 @@ html {
 @media (max-width: 639px) {
   .search-bar-hero {
     padding: 1rem;
+    
+  
   }
 }
 
 /* untuk samsung */
 @media (max-width: 360px) {
-  section#hero > div {
+  section#hero>div {
     padding-top: 8px;
   }
 
-  section#hero > div > .flex {
+  section#hero>div>.flex {
     gap: 0;
   }
 }

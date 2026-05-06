@@ -2,9 +2,20 @@
   // Mobile menu toggle
   const hamburger = document.getElementById('hamburger-btn');
   const mobileMenu = document.getElementById('mobile-menu');
+
   hamburger.addEventListener('click', () => {
     mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('is-open');
   });
+
+  // code saat burger button di close
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('is-open');
+    });
+  });
+
 
 
   document.querySelectorAll('.pill-active, .pill-inactive').forEach(btn => {
