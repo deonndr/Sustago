@@ -116,8 +116,17 @@ html {
 
 /* Search bar hero */
 .search-bar-hero {
-  max-width: 90%;
+  width: 100%;       
+  max-width: 92%;    
   margin: 0 auto;
+}
+
+/* search bar desktop */
+@media (min-width: 1024px) {
+  .search-bar-hero {
+    max-width: 50%;  
+    margin-left: 10%;
+  }
 }
 
 /* Hero image grid */
@@ -149,5 +158,42 @@ html {
 
   section#hero>div>.flex {
     gap: 0;
+  }
+}
+
+/* animasi garis bawah di teks "Dukung Lokal" di hero section */ 
+ .hl {
+  position: relative;
+  display: inline-block;
+}
+
+.hl::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -9px;
+  height: 5px;
+  background: #16a34a;
+  border-radius: 2px;
+  transform-origin: left center;
+  animation: bar 0.5s 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes bar {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* animasi goyang hero image */
+.globe {
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
   }
 }
