@@ -37,3 +37,20 @@
       navbar.classList.remove('nav-scrolled');
     }
   });
+
+  // Buat gerakin carousel nya
+  const destCarousel = document.getElementById('dest-carousel');
+  const destPrev = document.getElementById('dest-prev');
+  const destNext = document.getElementById('dest-next');
+
+  if (destCarousel && destPrev && destNext) {
+    const scrollAmount = 320;
+
+    destPrev.addEventListener('click', () => {
+      destCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    destNext.addEventListener('click', () => {
+      destCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  }
