@@ -26,11 +26,6 @@ body {
   background: linear-gradient(135deg, #0f2044 0%, #1e56a0 55%, #2271c3 100%);
 }
 
-/* Footer */
-.footer-bg {
-  background: linear-gradient(180deg, #0a1628 0%, #0f2044 100%);
-}
-
 /* Feature icon wrapper */
 .feat-icon {
   background: linear-gradient(135deg, #deeeff 0%, #b3d4f5 100%);
@@ -112,6 +107,18 @@ html {
 .delay-3 {
   animation-delay: 0.4s;
   opacity: 0;
+}
+
+/* Kode Scroll Reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Search bar hero */
@@ -211,3 +218,4 @@ html {
 .destinasi-card:hover {
   transform: translateY(-6px);
 }
+

@@ -29,15 +29,13 @@
           </a>
         </div>
 
-        <div class="items-center text-lg hidden gap-10 lg:flex ml-">
-          <a href="#hero"
-            class=" font-semibold transition-colors text-ocean-900 hover:text-ocean-600">Beranda</a>
+        <div class="items-center text-lg hidden gap-10 lg:flex ">
+          <a href="#hero" class=" font-semibold transition-colors text-ocean-900 hover:text-ocean-600">Beranda</a>
           <a href="#destinasi" class=" font-medium transition-colors text-slate-700 hover:text-ocean-600">Atur
             Perjalanan</a>
-          <a href="#artikel"
-            class=" font-medium transition-colors text-slate-700 hover:text-ocean-600">Artikel</a>
-          <a href="#tentang-kami"
-            class=" font-medium transition-colors text-slate-700 hover:text-ocean-600">Tentang Kami</a>
+          <a href="#artikel" class=" font-medium transition-colors text-slate-700 hover:text-ocean-600">Artikel</a>
+          <a href="#tentang-kami" class=" font-medium transition-colors text-slate-700 hover:text-ocean-600">Tentang
+            Kami</a>
         </div>
 
         <div class="items-center hidden gap-6 lg:flex">
@@ -94,6 +92,7 @@
 
   <!-- HERO SECTION -->
   <section id="hero" class=" relative min-h-screen pt-14 lg:pt-32 overflow-hidden bg-slate-50">
+
     <div class="px-4 pt-8 pb-8 mx-auto sm:px-6 lg:px-8 lg:pt-16">
       <div class="flex flex-col items-center gap-8 lg:flex-row lg:gap-4 justify-center ">
         <div class="w-full lg:w-[40%] z-5 fade-up delay-1">
@@ -106,14 +105,14 @@
           </div>
           <!-- bagian text hero section -->
           <h1
-            class="font-heading text-3xl sm:text-5xl lg:text-[4rem] font-extrabold text-ocean-900 leading-[1.15] mb-6">
-            Jelajahi Berkelanjutan<br />
-            <span class="hl text-indigo-500 whitespace-nowrap">Dukung Lokal</span><br />
-            Jaga Bumi
+            class="font-heading text-3xl sm:text-5xl lg:text-[5.5rem] font-extrabold text-ocean-900 leading-[1.15] mb-6">
+            Perjalananmu<br />
+            <span class="hl text-indigo-500 whitespace-nowrap">Perubahan</span> Kita
+
           </h1>
           <p class="max-w-lg mb-10 text-base leading-relaxed text-black sm:text-lg">
             Temukan destinasi ramah lingkungan, nikmati keindahan alam dan
-            budaya lokal, serta dukung UMKM di setiap perjalanan
+            budaya lokal, serta dukung <span class="font-extrabold">UMKM</span> di setiap perjalanan
           </p>
           <button
             class="w-full px-10 py-3 text-sm font-bold text-white transition-all duration-300 shadow-lg sm:w-auto bg-ocean-900 hover:bg-ocean-800 rounded-xl shadow-ocean-900/20 hover:shadow-ocean-900/40 whitespace-nowrap">
@@ -169,7 +168,8 @@
   </section>
 
   <!-- STATISTIK -->
-  <section id="stats" class="flex flex-wrap justify-center mt-14 items-center gap-20 px-6 border-t border-gray-100 py-10">
+  <section id="stats"
+    class="scroll-reveal flex flex-wrap justify-center mt-14 items-center gap-20 px-6 border-t border-gray-100 py-10">
     <div class="flex item-center gap-3">
       <div class="text-gray-400">
         <img src="assets/img/bus.svg" alt="Destinasi">
@@ -210,39 +210,45 @@
   </section>
 
 
-  
+
   <!-- DESTINASI POPULER -->
-  <section id="destinasi" class="py-28 lg:py-28 px-6 bg-white overflow-hidden">
+  <section id="destinasi" class="py-28 lg:py-36 px-6 bg-white overflow-hidden">
     <div class="max-w-[90%] lg:max-w-[1440px] mx-auto w-full">
       <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
-        <div class="relative border-l-4 border-transparent">
+        <div class="scroll-reveal relative border-l-4 border-transparent">
           <div class="inline-flex items-center gap-2 mb-3">
             <span class="text-ocean-600"><img src="assets/img/logo-raw.svg" alt="logo"></span>
             <span class="text-sm font-semibold text-ocean-900 tracking-wide">Destinasi Populer</span>
           </div>
-          <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ocean-900 leading-tight">
+          <h2 class="font-heading text-3xl mb-10 sm:text-4xl lg:text-5xl font-extrabold text-ocean-900 leading-tight">
             Temukan Destinasi<br>Impianmu
           </h2>
         </div>
 
         <!--tanda panah-->
         <div class="flex items-center gap-3">
-          <button id="dest-prev" class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-ocean-50 hover:text-ocean-700 hover:border-ocean-300 transition-all duration-300">
+          <button id="dest-prev"
+            class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-ocean-50 hover:text-ocean-700 hover:border-ocean-300 transition-all duration-300">
             <img src="assets/img/panah-kiri.svg" alt="Previous" class="w-4 h-4" />
           </button>
-          <button id="dest-next" class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-ocean-50 hover:text-ocean-700 hover:border-ocean-300 transition-all duration-300">
+          <button id="dest-next"
+            class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-ocean-50 hover:text-ocean-700 hover:border-ocean-300 transition-all duration-300">
             <img src="assets/img/panah-kanan.svg" alt="Next" class="w-4 h-4" />
           </button>
         </div>
       </div>
 
       <!-- Card buat Carousel -->
-      <div id="dest-carousel" class="flex gap-6 overflow-x-auto scroll-smooth pb-4 snap-x snap-mandatory" style="scrollbar-width: none; -ms-overflow-style: none;">
+      <div id="dest-carousel" class="scroll-reveal flex gap-6 overflow-x-auto scroll-smooth pb-4 snap-x snap-mandatory"
+        style="scrollbar-width: none; -ms-overflow-style: none;">
 
         <div class="destinasi-card group flex-shrink-0 w-[280px] sm:w-[300px] snap-start cursor-pointer">
-          <div class="relative rounded-2xl overflow-hidden mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
-            <img src="assets/img/raja-ampat.jpg" alt="Raja Ampat" class="w-full h-[200px] object-cover group-hover:scale-105 transition-transform duration-500" />
-            <div class="absolute top-3 left-3 inline-flex items-center gap-1 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 shadow-sm">
+          <div
+            class="relative rounded-2xl overflow-hidden mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
+            <img src="assets/img/raja-ampat.jpg" alt="Raja Ampat"
+              class="w-full h-[200px] object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div
+              class="absolute top-3 left-3 inline-flex items-center gap-1 bg-white/50 backdrop-blur-sm rounded-full px-3 py-1 shadow-sm">
               <span><img src="assets/img/bintang.svg" alt="Bintang"></span>
               <span class="text-sm font-bold text-ocean-900">5.0</span>
             </div>
@@ -256,9 +262,12 @@
         </div>
 
         <div class="destinasi-card group flex-shrink-0 w-[280px] sm:w-[300px] snap-start cursor-pointer">
-          <div class="relative rounded-2xl overflow-hidden mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
-            <img src="assets/img/borobudur.jpg" alt="Borobudur" class="w-full h-[200px] object-cover group-hover:scale-105 transition-transform duration-500" />
-            <div class="absolute top-3 left-3 inline-flex items-center gap-1 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 shadow-sm">
+          <div
+            class="relative rounded-2xl overflow-hidden mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
+            <img src="assets/img/borobudur.jpg" alt="Borobudur"
+              class="w-full h-[200px] object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div
+              class="absolute top-3 left-3 inline-flex items-center gap-1 bg-white/50 backdrop-blur-sm rounded-full px-3 py-1 shadow-sm">
               <span><img src="assets/img/bintang.svg" alt="Bintang"></span>
               <span class="text-sm font-bold text-ocean-900">5.0</span>
             </div>
@@ -272,9 +281,12 @@
         </div>
 
         <div class="destinasi-card group flex-shrink-0 w-[280px] sm:w-[300px] snap-start cursor-pointer">
-          <div class="relative rounded-2xl overflow-hidden mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
-            <img src="assets/img/bali.jpg" alt="Bali" class="w-full h-[200px] object-cover group-hover:scale-105 transition-transform duration-500" />
-            <div class="absolute top-3 left-3 inline-flex items-center gap-1 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 shadow-sm">
+          <div
+            class="relative rounded-2xl overflow-hidden mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
+            <img src="assets/img/bali.jpg" alt="Bali"
+              class="w-full h-[200px] object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div
+              class="absolute top-3 left-3 inline-flex items-center gap-1 bg-white/50 backdrop-blur-sm rounded-full px-3 py-1 shadow-sm">
               <span><img src="assets/img/bintang.svg" alt="Bintang"></span>
               <span class="text-sm font-bold text-ocean-900">5.0</span>
             </div>
@@ -288,9 +300,12 @@
         </div>
 
         <div class="destinasi-card group flex-shrink-0 w-[280px] sm:w-[300px] snap-start cursor-pointer">
-          <div class="relative rounded-2xl overflow-hidden mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
-            <img src="assets/img/raja-ampat.jpg" alt="Raja Ampat" class="w-full h-[200px] object-cover group-hover:scale-105 transition-transform duration-500" />
-            <div class="absolute top-3 left-3 inline-flex items-center gap-1 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 shadow-sm">
+          <div
+            class="relative rounded-2xl overflow-hidden mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
+            <img src="assets/img/raja-ampat.jpg" alt="Raja Ampat"
+              class="w-full h-[200px] object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div
+              class="absolute top-3 left-3 inline-flex items-center gap-1 bg-white/50 backdrop-blur-sm rounded-full px-3 py-1 shadow-sm">
               <span><img src="assets/img/bintang.svg" alt="Bintang"></span>
               <span class="text-sm font-bold text-ocean-900">5.0</span>
             </div>
@@ -303,9 +318,12 @@
           </div>
         </div>
         <div class="destinasi-card group flex-shrink-0 w-[280px] sm:w-[300px] snap-start cursor-pointer">
-          <div class="relative rounded-2xl overflow-hidden mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
-            <img src="assets/img/raja-ampat.jpg" alt="Raja Ampat" class="w-full h-[200px] object-cover group-hover:scale-105 transition-transform duration-500" />
-            <div class="absolute top-3 left-3 inline-flex items-center gap-1 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 shadow-sm">
+          <div
+            class="relative rounded-2xl overflow-hidden mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
+            <img src="assets/img/raja-ampat.jpg" alt="Raja Ampat"
+              class="w-full h-[200px] object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div
+              class="absolute top-3 left-3 inline-flex items-center gap-1 bg-white/50 backdrop-blur-sm rounded-full px-3 py-1 shadow-sm">
               <span><img src="assets/img/bintang.svg" alt="Bintang"></span>
               <span class="text-sm font-bold text-ocean-900">5.0</span>
             </div>
@@ -318,9 +336,12 @@
           </div>
         </div>
         <div class="destinasi-card group flex-shrink-0 w-[280px] sm:w-[300px] snap-start cursor-pointer">
-          <div class="relative rounded-2xl overflow-hidden mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
-            <img src="assets/img/raja-ampat.jpg" alt="Raja Ampat" class="w-full h-[200px] object-cover group-hover:scale-105 transition-transform duration-500" />
-            <div class="absolute top-3 left-3 inline-flex items-center gap-1 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 shadow-sm">
+          <div
+            class="relative rounded-2xl overflow-hidden mb-4 shadow-md group-hover:shadow-xl transition-shadow duration-300">
+            <img src="assets/img/raja-ampat.jpg" alt="Raja Ampat"
+              class="w-full h-[200px] object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div
+              class="absolute top-3 left-3 inline-flex items-center gap-1 bg-white/50 backdrop-blur-sm rounded-full px-3 py-1 shadow-sm">
               <span><img src="assets/img/bintang.svg" alt="Bintang"></span>
               <span class="text-sm font-bold text-ocean-900">5.0</span>
             </div>
@@ -339,82 +360,332 @@
 
 
   <!-- fitur unggulan -->
-  <section id="fitur" class=" mb-20 py-20 lg:py-28 px-6 bg-white overflow-hidden">
-  <div class="max-w-[90%] lg:max-w-[1440px] mx-auto w-full">
-    
-    <div class="flex flex-col items-center text-center mb-16 lg:mb-24">
-      
-      <div class="inline-flex items-center gap-2 mb-4  px-4 py-1.5 ">
-        <i class="text-xs "><img src="assets/img/logo-raw.svg" alt=""></i>
-        <span class="text-xs sm:text-sm font-semibold text-ocean-900 tracking-wide uppercase">
-          Fitur Unggulan
-        </span>
+  <section id="fitur" class=" mb-1 py-20 lg:py-28 px-6 bg-white overflow-hidden">
+    <div class="max-w-[90%] lg:max-w-[1440px] mx-auto w-full">
+
+      <div class="scroll-reveal flex flex-col items-center text-center mb-16 lg:mb-24">
+
+        <div class="inline-flex items-center gap-2 mb-4  px-4 py-1.5 ">
+          <i class="text-xs "><img src="assets/img/logo-raw.svg" alt=""></i>
+          <span class="text-xs sm:text-sm font-semibold text-ocean-900 tracking-wide">
+            Fitur Unggulan
+          </span>
+        </div>
+
+        <h2
+          class="font-heading text-4xl sm:text-5xl xl:text-6xl font-extrabold text-ocean-900 leading-[1.2] max-w-4xl tracking-tight">
+          Setiap perjalanan punya<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 pb-1">
+            dampak nyata
+          </span>
+        </h2>
       </div>
 
-      <h2 class="font-heading text-4xl sm:text-5xl xl:text-6xl font-extrabold text-ocean-900 leading-[1.2] max-w-4xl tracking-tight">
-        Setiap perjalanan punya<br />
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 pb-1">
-          dampak nyata
-        </span>
-      </h2>
+
+      <div class="scroll-reveal grid grid-cols-1 lg:grid-cols-3 gap-y-12 gap-x-10 items-stretch justify-items-center">
+
+        <div
+          class="flex flex-col items-center text-center gap-6 p-6 group rounded-3xl hover:bg-slate-50/50 transition-all duration-300 w-full max-w-md lg:max-w-full">
+
+          <div
+            class="w-16 h-16 rounded-full bg-indigo-400 flex items-center justify-center text-indigo-600 shadow-lg group-hover:scale-110 transition-all duration-300">
+            <i><img src="assets/img/bus-destinasi.svg" class="scale-75" alt="Bus Destinasi"></i>
+          </div>
+
+          <div>
+            <h3 class="text-xl sm:text-2xl font-bold text-ocean-900 mb-2">
+              Destinasi Cerdas
+            </h3>
+            <p class="text-base text-ocean-900 leading-relaxed max-w-xs mx-auto">
+              Rekomendasi destinasi personal berdasarkan lokasi, anggaran, dan Eco Score Anda.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col items-center text-center gap-6 p-6 group rounded-3xl hover:bg-slate-50/50 transition-all duration-300 w-full max-w-md lg:max-w-full">
+
+          <div
+            class="w-16 h-16 rounded-full bg-indigo-400 flex items-center justify-center text-indigo-600 shadow-lg group-hover:scale-110 transition-all duration-300">
+            <i><img src="assets/img/troli-belanja.svg" class="scale-90" alt="Wisata Lokal"></i>
+          </div>
+
+          <div>
+            <h3 class="text-xl sm:text-2xl font-bold text-ocean-900 mb-2">
+              Wisata & Produk Lokal
+            </h3>
+            <p class="text-base text-ocean-900 leading-relaxed max-w-xs mx-auto">
+              Temukan penginapan, kuliner, & produk lokal yang bersih dan berdampak.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col items-center text-center gap-6 p-6 group rounded-3xl hover:bg-slate-50/50 transition-all duration-300 w-full max-w-md lg:max-w-full">
+
+          <div
+            class="w-16 h-16 rounded-full bg-indigo-400 flex items-center justify-center text-indigo-600 shadow-lg group-hover:scale-110 transition-all duration-300">
+            <i><img src="assets/img/pesan.svg" class="scale-90" alt="Penilaian & Ulasan Eco"></i>
+          </div>
+
+          <div>
+            <h3 class="text-xl sm:text-2xl font-bold text-ocean-900 mb-2">
+              Penilaian & Ulasan Eco
+            </h3>
+            <p class="text-base text-ocean-900 leading-relaxed max-w-xs mx-auto">
+              Nilai estetika, efektivitas, dan dampak lingkungan dalam satu ulasan.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
     </div>
+  </section>
 
+  <!-- ARTIKEL SECTION -->
+  <section id="artikel" class="py-28 lg:py-36 px-6 bg-white overflow-hidden">
+    <div class="max-w-[90%] lg:max-w-[1440px] mx-auto w-full">
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-12 gap-x-10 items-stretch justify-items-center">
-      
-      <div class="flex flex-col items-center text-center gap-6 p-6 group rounded-3xl hover:bg-slate-50/50 transition-all duration-300 w-full max-w-md lg:max-w-full">
-        
-        <div class="w-16 h-16 rounded-full bg-indigo-400 flex items-center justify-center text-indigo-600 shadow-lg group-hover:scale-110 transition-all duration-300">
-          <i><img src="assets/img/bus-destinasi.svg" class="scale-75" alt="Bus Destinasi"></i>
-        </div>
-        
-        <div>
-          <h3 class="text-xl sm:text-2xl font-bold text-ocean-900 mb-2">
-            Destinasi Cerdas
-          </h3>
-          <p class="text-base text-ocean-900 leading-relaxed max-w-xs mx-auto">
-            Rekomendasi destinasi personal berdasarkan lokasi, anggaran, dan Eco Score Anda.
+      <!-- BAGIAN JUDUL ARTIKEL -->
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+        <div class="scroll-reveal relative border-l-4 border-transparent">
+          <div class="inline-flex items-center gap-2 mb-3">
+            <span class="text-ocean-600"><img src="assets/img/logo-raw.svg" alt="logo"></span>
+            <span class="text-sm font-semibold text-ocean-900 tracking-wide">Artikel & Inspirasi</span>
+          </div>
+          <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ocean-900 leading-tight">
+            Setiap Perjalanan<br>Punya Dampak Nyata
+          </h2>
+          <p class="text-slate-500 max-w-xl leading-relaxed mt-5">
+            Temukan tips, panduan, dan inspirasi perjalanan untuk membuat pengalamanmu semakin berkesan.
           </p>
         </div>
       </div>
 
-      <div class="flex flex-col items-center text-center gap-6 p-6 group rounded-3xl hover:bg-slate-50/50 transition-all duration-300 w-full max-w-md lg:max-w-full">
-        
-        <div class="w-16 h-16 rounded-full bg-indigo-400 flex items-center justify-center text-indigo-600 shadow-lg group-hover:scale-110 transition-all duration-300">
-          <i><img src="assets/img/troli-belanja.svg" class="scale-90" alt="Wisata Lokal"></i>
+      <!-- BAGIAN CARD IMG -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="scroll-reveal group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl mb-5 aspect-[1.618/1]">
+            <img src="assets/img/borobudur.jpg"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="artikel-img">
+            <div
+              class="absolute top-4 left-4 bg-white/20 backdrop-blur-md border border-white/30 px-4 py-1 rounded-full shadow-sm">
+              <span class="text-sm font-semibold text-white">Destinasi</span>
+            </div>
+          </div>
+          <div class="space-y-3 px-1">
+            <p class="text-slate-400 text-xs font-semibold">16 mei 2026</p>
+            <h3 class="text-lg font-bold text-ocean-900 group-hover:text-ocean-600 transition-colors">
+              10 Aktivitas Ramah Lingkungan<br>di Borobudur
+            </h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Temukan 10 aktivitas yang tidak hanya menyenangkan tetapi juga ramah lingkungan di destinasi populer ini.
+            </p>
+            <div class="pt-2">
+              <a href="#"
+                class="inline-flex items-center gap-2 group-hover:text-ocean-600 text-sm font-bold text-slate-950 group-hover:gap-3 transition-all">
+                Baca Selengkapnya
+                <span class="text-lg leading-none transition-transform group-hover:translate-x-1 font-bold">→</span>
+              </a>
+            </div>
+          </div>
         </div>
-        
-        <div>
-          <h3 class="text-xl sm:text-2xl font-bold text-ocean-900 mb-2">
-            Wisata & Produk Lokal
-          </h3>
-          <p class="text-base text-ocean-900 leading-relaxed max-w-xs mx-auto">
-            Temukan penginapan, kuliner, & produk lokal yang bersih dan berdampak.
-          </p>
+
+        <div class="scroll-reveal group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl mb-5 aspect-[1.618/1]">
+            <img src="assets/img/borobudur.jpg"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="artikel-img">
+            <div
+              class="absolute top-4 left-4 bg-white/20 backdrop-blur-md border border-white/30 px-4 py-1 rounded-full shadow-sm">
+              <span class="text-sm font-semibold text-white">Destinasi</span>
+            </div>
+          </div>
+          <div class="space-y-3 px-1">
+            <p class="text-slate-400 text-xs font-semibold">16 mei 2026</p>
+            <h3 class="text-lg font-bold text-ocean-900 group-hover:text-ocean-600 transition-colors">
+              10 Aktivitas Ramah Lingkungan<br>di Borobudur
+            </h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Temukan 10 aktivitas yang tidak hanya menyenangkan tetapi juga ramah lingkungan di destinasi populer ini.
+            </p>
+            <div class="pt-2">
+              <a href="#"
+                class="inline-flex items-center gap-2 group-hover:text-ocean-600 text-sm font-bold text-slate-950 group-hover:gap-3 transition-all">
+                Baca Selengkapnya
+                <span class="text-lg leading-none transition-transform group-hover:translate-x-1 font-bold">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-reveal group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl mb-5 aspect-[1.618/1]">
+            <img src="assets/img/borobudur.jpg"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="artikel-img">
+            <div
+              class="absolute top-4 left-4 bg-white/20 backdrop-blur-md border border-white/30 px-4 py-1 rounded-full shadow-sm">
+              <span class="text-sm font-semibold text-white">Destinasi</span>
+            </div>
+          </div>
+          <div class="space-y-3 px-1">
+            <p class="text-slate-400 text-xs font-semibold">16 mei 2026</p>
+            <h3 class="text-lg font-bold text-ocean-900 group-hover:text-ocean-600 transition-colors">
+              10 Aktivitas Ramah Lingkungan<br>di Borobudur
+            </h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Temukan 10 aktivitas yang tidak hanya menyenangkan tetapi juga ramah lingkungan di destinasi populer ini.
+            </p>
+            <div class="pt-2">
+              <a href="#"
+                class="inline-flex items-center gap-2 group-hover:text-ocean-600 text-sm font-bold text-slate-950 group-hover:gap-3 transition-all">
+                Baca Selengkapnya
+                <span class="text-lg leading-none transition-transform group-hover:translate-x-1 font-bold">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-reveal group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl mb-5 aspect-[1.618/1]">
+            <img src="assets/img/borobudur.jpg"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="artikel-img">
+            <div
+              class="absolute top-4 left-4 bg-white/20 backdrop-blur-md border border-white/30 px-4 py-1 rounded-full shadow-sm">
+              <span class="text-sm font-semibold text-white">Destinasi</span>
+            </div>
+          </div>
+          <div class="space-y-3 px-1">
+            <p class="text-slate-400 text-xs font-semibold">16 mei 2026</p>
+            <h3 class="text-lg font-bold text-ocean-900 group-hover:text-ocean-600 transition-colors">
+              10 Aktivitas Ramah Lingkungan<br>di Borobudur
+            </h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Temukan 10 aktivitas yang tidak hanya menyenangkan tetapi juga ramah lingkungan di destinasi populer ini.
+            </p>
+            <div class="pt-2">
+              <a href="#"
+                class="inline-flex items-center gap-2 group-hover:text-ocean-600 text-sm font-bold text-slate-950 group-hover:gap-3 transition-all">
+                Baca Selengkapnya
+                <span class="text-lg leading-none transition-transform group-hover:translate-x-1 font-bold">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-reveal group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl mb-5 aspect-[1.618/1]">
+            <img src="assets/img/borobudur.jpg"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="artikel-img">
+            <div
+              class="absolute top-4 left-4 bg-white/20 backdrop-blur-md border border-white/30 px-4 py-1 rounded-full shadow-sm">
+              <span class="text-sm font-semibold text-white">Destinasi</span>
+            </div>
+          </div>
+          <div class="space-y-3 px-1">
+            <p class="text-slate-400 text-xs font-semibold">16 mei 2026</p>
+            <h3 class="text-lg font-bold text-ocean-900 group-hover:text-ocean-600 transition-colors">
+              10 Aktivitas Ramah Lingkungan<br>di Borobudur
+            </h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Temukan 10 aktivitas yang tidak hanya menyenangkan tetapi juga ramah lingkungan di destinasi populer ini.
+            </p>
+            <div class="pt-2">
+              <a href="#"
+                class="inline-flex items-center gap-2 group-hover:text-ocean-600 text-sm font-bold text-slate-950 group-hover:gap-3 transition-all">
+                Baca Selengkapnya
+                <span class="text-lg leading-none transition-transform group-hover:translate-x-1 font-bold">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-reveal group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl mb-5 aspect-[1.618/1]">
+            <img src="assets/img/borobudur.jpg"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="artikel-img">
+            <div
+              class="absolute top-4 left-4 bg-white/20 backdrop-blur-md border border-white/30 px-4 py-1 rounded-full shadow-sm">
+              <span class="text-sm font-semibold text-white">Destinasi</span>
+            </div>
+          </div>
+          <div class="space-y-3 px-1">
+            <p class="text-slate-400 text-xs font-semibold">16 mei 2026</p>
+            <h3 class="text-lg font-bold text-ocean-900 group-hover:text-ocean-600 transition-colors">
+              10 Aktivitas Ramah Lingkungan<br>di Borobudur
+            </h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Temukan 10 aktivitas yang tidak hanya menyenangkan tetapi juga ramah lingkungan di destinasi populer ini.
+            </p>
+            <div class="pt-2">
+              <a href="#"
+                class="inline-flex items-center gap-2 group-hover:text-ocean-600 text-sm font-bold text-slate-950 group-hover:gap-3 transition-all">
+                Baca Selengkapnya
+                <span class="text-lg leading-none transition-transform group-hover:translate-x-1 font-bold">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-reveal group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl mb-5 aspect-[1.618/1]">
+            <img src="assets/img/borobudur.jpg"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="artikel-img">
+            <div
+              class="absolute top-4 left-4 bg-white/20 backdrop-blur-md border border-white/30 px-4 py-1 rounded-full shadow-sm">
+              <span class="text-sm font-semibold text-white">Destinasi</span>
+            </div>
+          </div>
+          <div class="space-y-3 px-1">
+            <p class="text-slate-400 text-xs font-semibold">16 mei 2026</p>
+            <h3 class="text-lg font-bold text-ocean-900 group-hover:text-ocean-600 transition-colors">
+              10 Aktivitas Ramah Lingkungan<br>di Borobudur
+            </h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Temukan 10 aktivitas yang tidak hanya menyenangkan tetapi juga ramah lingkungan di destinasi populer ini.
+            </p>
+            <div class="pt-2">
+              <a href="#"
+                class="inline-flex items-center gap-2 group-hover:text-ocean-600 text-sm font-bold text-slate-950 group-hover:gap-3 transition-all">
+                Baca Selengkapnya
+                <span class="text-lg leading-none transition-transform group-hover:translate-x-1 font-bold">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-reveal group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl mb-5 aspect-[1.618/1]">
+            <img src="assets/img/borobudur.jpg"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              alt="artikel-img">
+            <div
+              class="absolute top-4 left-4 bg-white/20 backdrop-blur-md border border-white/30 px-4 py-1 rounded-full shadow-sm">
+              <span class="text-sm font-semibold text-white">Destinasi</span>
+            </div>
+          </div>
+          <div class="space-y-3 px-1">
+            <p class="text-slate-400 text-xs font-semibold">16 mei 2026</p>
+            <h3 class="text-lg font-bold text-ocean-900 group-hover:text-ocean-600 transition-colors">
+              10 Aktivitas Ramah Lingkungan<br>di Borobudur
+            </h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Temukan 10 aktivitas yang tidak hanya menyenangkan tetapi juga ramah lingkungan di destinasi populer ini.
+            </p>
+            <div class="pt-2">
+              <a href="#"
+                class="inline-flex items-center gap-2 group-hover:text-ocean-600 text-sm font-bold text-slate-950 group-hover:gap-3 transition-all">
+                Baca Selengkapnya
+                <span class="text-lg leading-none transition-transform group-hover:translate-x-1 font-bold">→</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="flex flex-col items-center text-center gap-6 p-6 group rounded-3xl hover:bg-slate-50/50 transition-all duration-300 w-full max-w-md lg:max-w-full">
-        
-        <div class="w-16 h-16 rounded-full bg-indigo-400 flex items-center justify-center text-indigo-600 shadow-lg group-hover:scale-110 transition-all duration-300">
-          <i><img src="assets/img/pesan.svg" class="scale-90" alt="Penilaian & Ulasan Eco"></i>
-        </div>
-        
-        <div>
-          <h3 class="text-xl sm:text-2xl font-bold text-ocean-900 mb-2">
-            Penilaian & Ulasan Eco
-          </h3>
-          <p class="text-base text-ocean-900 leading-relaxed max-w-xs mx-auto">
-            Nilai estetika, efektivitas, dan dampak lingkungan dalam satu ulasan.
-          </p>
-        </div>
-      </div>
-
     </div>
-
-  </div>
-</section>
-
+  </section>
 
   <!-- JAVASCRIPT -->
   <script src="js/main.js"></script>
