@@ -1,105 +1,147 @@
 
-  // Mobile menu toggle
-  const hamburger = document.getElementById('hamburger-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
+// Mobile menu toggle
+const hamburger = document.getElementById('hamburger-btn');
+const mobileMenu = document.getElementById('mobile-menu');
 
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('is-open');
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('is-open');
+});
+
+// code saat burger button di close
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('is-open');
   });
+});
 
-  // code saat burger button di close
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('is-open');
+
+
+document.querySelectorAll('.pill-active, .pill-inactive').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.pill-active, .pill-inactive').forEach(b => {
+      b.classList.remove('pill-active');
+      b.classList.add('pill-inactive');
     });
+    btn.classList.remove('pill-inactive');
+    btn.classList.add('pill-active');
   });
+});
 
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    navbar.classList.add('nav-scrolled');
+  } else {
+    navbar.classList.remove('nav-scrolled');
+  }
+});
 
+// Code navbar aktif
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  let current = '';
 
-  document.querySelectorAll('.pill-active, .pill-inactive').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.pill-active, .pill-inactive').forEach(b => {
-        b.classList.remove('pill-active');
-        b.classList.add('pill-inactive');
-      });
-      btn.classList.remove('pill-inactive');
-      btn.classList.add('pill-active');
-    });
-  });
-
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      navbar.classList.add('nav-scrolled');
-    } else {
-      navbar.classList.remove('nav-scrolled');
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (scrollY >= (sectionTop - 200)) {
+      current = section.getAttribute('id');
     }
   });
 
-  // Code navbar aktif
-  const sections = document.querySelectorAll('section[id]');
-  window.addEventListener('scroll', () => {
-    let current = '';
+  document.querySelectorAll('#navbar a[href^="#"]').forEach(link => {
+    const isMobile = link.closest('#mobile-menu') !== null;
 
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      if (scrollY >= (sectionTop - 200)) { 
-        current = section.getAttribute('id');
-      }
-    });
+    link.classList.remove('text-ocean-900', 'font-semibold');
+    if (isMobile) {
+      link.classList.add('text-slate-600', 'font-medium');
+    } else {
+      link.classList.add('text-slate-700', 'font-medium');
+    }
 
-    document.querySelectorAll('#navbar a[href^="#"]').forEach(link => {
-      const isMobile = link.closest('#mobile-menu') !== null;
-      
-      link.classList.remove('text-ocean-900', 'font-semibold');
+    if (link.getAttribute('href') === `#${current}`) {
       if (isMobile) {
-        link.classList.add('text-slate-600', 'font-medium');
+        link.classList.remove('text-slate-600', 'font-medium');
       } else {
-        link.classList.add('text-slate-700', 'font-medium');
+        link.classList.remove('text-slate-700', 'font-medium');
       }
+      link.classList.add('text-ocean-900', 'font-semibold');
+    }
+  });
+});
 
-      if (link.getAttribute('href') === `#${current}`) {
-        if (isMobile) {
-          link.classList.remove('text-slate-600', 'font-medium');
-        } else {
-          link.classList.remove('text-slate-700', 'font-medium');
-        }
-        link.classList.add('text-ocean-900', 'font-semibold');
-      }
-    });
+// Buat gerakin carousel nya
+const destCarousel = document.getElementById('dest-carousel');
+const destPrev = document.getElementById('dest-prev');
+const destNext = document.getElementById('dest-next');
+
+if (destCarousel && destPrev && destNext) {
+  const scrollAmount = 320;
+
+  destPrev.addEventListener('click', () => {
+    destCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
   });
 
-  // Buat gerakin carousel nya
-  const destCarousel = document.getElementById('dest-carousel');
-  const destPrev = document.getElementById('dest-prev');
-  const destNext = document.getElementById('dest-next');
+  destNext.addEventListener('click', () => {
+    destCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+}
 
-  if (destCarousel && destPrev && destNext) {
-    const scrollAmount = 320;
+// Animasi reveal pas scroll
+const revealElements = document.querySelectorAll('.scroll-reveal');
+const revealObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px"
+});
 
-    destPrev.addEventListener('click', () => {
-      destCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    });
+revealElements.forEach(el => revealObserver.observe(el));
 
-    destNext.addEventListener('click', () => {
-      destCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    });
-  }
+// ANIMASI FAQ
+const faqToggles = document.querySelectorAll('.faq-toggle');
 
-  // Animasi reveal pas scroll
-  const revealElements = document.querySelectorAll('.scroll-reveal');
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target);
+faqToggles.forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    const parentItem = toggle.closest('.faq-item');
+    const content = parentItem.querySelector('.faq-content');
+    const icon = toggle.querySelector('.faq-icon');
+    const isActive = toggle.dataset.active === 'true';
+
+    // Code buat nutup semua pertanyaan lain yang lagi kebuka
+    faqToggles.forEach(otherToggle => {
+      if (otherToggle !== toggle) {
+        const otherItem = otherToggle.closest('.faq-item');
+        const otherContent = otherItem.querySelector('.faq-content');
+        const otherIcon = otherToggle.querySelector('.faq-icon');
+
+        otherToggle.dataset.active = 'false';
+        otherContent.style.maxHeight = '0';
+        otherIcon.textContent = '+';
+        otherIcon.classList.remove('bg-[#4F6BF0]', 'text-white');
+        otherIcon.classList.add('bg-slate-200', 'text-slate-600');
       }
     });
-  }, {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-  });
 
-  revealElements.forEach(el => revealObserver.observe(el));
+    // Toggle pertanyaan yang diklik
+    if (isActive) {
+      toggle.dataset.active = 'false';
+      content.style.maxHeight = '0';
+      icon.textContent = '+';
+      icon.classList.remove('bg-[#4F6BF0]', 'text-white');
+      icon.classList.add('bg-slate-200', 'text-slate-600');
+    } else {
+      toggle.dataset.active = 'true';
+      content.style.maxHeight = content.scrollHeight + 'px';
+      icon.textContent = '−';
+      icon.classList.remove('bg-slate-200', 'text-slate-600');
+      icon.classList.add('bg-[#4F6BF0]', 'text-white');
+    }
+  });
+});
