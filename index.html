@@ -34,7 +34,7 @@
           <a href="#destinasi" class=" font-medium transition-colors text-slate-700 hover:text-ocean-600">Atur
             Perjalanan</a>
           <a href="#artikel" class=" font-medium transition-colors text-slate-700 hover:text-ocean-600">Artikel</a>
-          <a href="#tentang-kami" class=" font-medium transition-colors text-slate-700 hover:text-ocean-600">Tentang
+          <a href="#faq" class=" font-medium transition-colors text-slate-700 hover:text-ocean-600">Tentang
             Kami</a>
         </div>
 
@@ -70,7 +70,7 @@
       <a href="#destinasi" class="block py-3 text-base font-medium text-slate-600 border-b border-slate-50">Atur
         Perjalanan</a>
       <a href="#artikel" class="block py-3 text-base font-medium text-slate-600 border-b border-slate-50">Artikel</a>
-      <a href="#tentang-kami" class="block py-3 text-base font-medium text-slate-600 border-b border-slate-50">Tentang
+      <a href="#faq" class="block py-3 text-base font-medium text-slate-600 border-b border-slate-50">Tentang
         Kami</a>
       <div class="flex gap-3 mt-4">
         <button
@@ -169,8 +169,8 @@
 
   <!-- STATISTIK -->
   <section id="stats"
-    class="scroll-reveal flex flex-wrap justify-center mt-14 items-center gap-20 px-6 border-t border-gray-100 py-10">
-    <div class="flex item-center gap-3">
+    class="scroll-reveal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-start sm:justify-items-center mt-14 items-center gap-16 sm:gap-14 lg:gap-9 px-6 sm:px-10 border-t border-gray-100 py-10 max-w-fit sm:max-w-full lg:max-w-5xl mx-auto">
+    <div class="flex items-center gap-3">
       <div class="text-gray-400">
         <img src="assets/img/bus.svg" alt="Destinasi">
       </div>
@@ -178,9 +178,9 @@
         <p class="text-2xl font-bold text-ocean-900">500+</p>
         <p class="text-lg font-bold text-ocean-900">Destinasi Eco</p>
       </div>
-
     </div>
-    <div class="flex item-center gap-3">
+
+    <div class="flex items-center gap-3">
       <div class="text-gray-400">
         <img src="assets/img/UMKM.svg" alt="UMKM">
       </div>
@@ -189,7 +189,8 @@
         <p class="text-lg font-bold text-ocean-900">UMKM Lokal</p>
       </div>
     </div>
-    <div class="flex item-center gap-3">
+
+    <div class="flex items-center gap-3">
       <div class="text-gray-400">
         <img src="assets/img/User.svg" alt="Pengguna Aktif">
       </div>
@@ -198,7 +199,8 @@
         <p class="text-lg font-bold text-ocean-900">Pengguna Aktif</p>
       </div>
     </div>
-    <div class="flex item-center gap-3">
+
+    <div class="flex items-center gap-3">
       <div class="text-gray-400">
         <img src="assets/img/daun2.svg" alt="CO2">
       </div>
@@ -444,7 +446,7 @@
   </section>
 
   <!-- ARTIKEL SECTION -->
-  <section id="artikel" class="py-28 lg:py-36 px-6 bg-white overflow-hidden">
+  <section id="artikel" class="py-10 lg:py-20 px-6 bg-white overflow-hidden">
     <div class="max-w-[90%] lg:max-w-[1440px] mx-auto w-full">
 
       <!-- BAGIAN JUDUL ARTIKEL -->
@@ -502,7 +504,7 @@
               alt="artikel-img">
             <div
               class="absolute top-4 left-4 bg-white/20 backdrop-blur-md border border-white/30 px-4 py-1 rounded-full shadow-sm">
-              <span class="text-sm font-semibold text-white">Tips</span>
+              <span class="text-sm font-semibold text-white">Panduan</span>
             </div>
           </div>
           <div class="space-y-3 px-1">
@@ -610,11 +612,11 @@
       <div id="faq-accordion" class="scroll-reveal space-y-4">
 
         <div class="faq-item border-b border-slate-200 pb-4">
-          <button class="faq-toggle w-full flex items-center gap-4 text-left py-3 group" data-active="true">
-            <span class="faq-icon flex-shrink-0 w-8 h-8 rounded-full bg-[#4F6BF0] flex items-center justify-center text-white text-xl font-bold leading-none transition-all duration-300">−</span>
+          <button class="faq-toggle w-full flex items-center gap-4 text-left py-3 group" data-active="false">
+            <span class="faq-icon flex-shrink-0 w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xl font-bold leading-none transition-all duration-300">+</span>
             <span class="text-base sm:text-lg font-bold text-ocean-900 group-hover:text-ocean-600 transition-colors">Bagaimana cara melakukan pemesanan perjalanan?</span>
           </button>
-          <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 200px;">
+          <div class="faq-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0;">
             <p class="pl-12 pb-3 text-sm sm:text-base text-slate-500 leading-relaxed">
               Kamu dapat mencari destinasi, memilih paket yang tersedia, lalu klik Tombol "Pesan Sekarang". Ikuti langkah-langkah pembayaran dan kamu akan menerima konfirmasi via email.
             </p>
@@ -676,9 +678,62 @@
   </section>
 
   <!-- BAGIAN FOOTER -->
-<footer class="">
+  <footer class="bg-white pt-10  pb-16 px-6">
+    <div class="max-w-[90%] lg:max-w-[1440px] mx-auto w-full">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+        
+        <!-- Brand & Deskripsi-->
+        <div class="lg:col-span-5 flex flex-col gap-4">
+          <div class="inline-flex items-center gap-2">
+            <span class="text-ocean-600"><img src="assets/img/logo-raw.svg" alt="logo" class="w-6 h-auto"></span>
+            <span class="text-2xl lg:text-[28px] font-heading font-medium text-[#2d3648] tracking-tight">Sustago</span>
+          </div>
+          <p class="text-slate-400 text-[15px] max-w-[320px] leading-relaxed mt-2 font-medium">
+            Teman terbaikmu untuk menjelajahi dunia.
+            Kami menghadirkan pengalaman perjalanan
+            yang mudah, aman, dan berkesan.
+          </p>
+        </div>
 
-</footer>
+        <!-- Links Jelajahi -->
+        <div class="lg:col-span-2 lg:col-start-7 flex flex-col gap-6">
+          <h4 class="text-[17px] font-bold text-[#1a202c]">Jelajahi</h4>
+          <div class="flex flex-col gap-5">
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">Destinasi</a>
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">Paket Wisata</a>
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">Promo</a>
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">Artikel</a>
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">Tentang Kami</a>
+          </div>
+        </div>
+
+        <!-- Links Layanan -->
+        <div class="lg:col-span-2 flex flex-col gap-6">
+          <h4 class="text-[17px] font-bold text-[#1a202c]">Layanan</h4>
+          <div class="flex flex-col gap-5">
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">Tiket Pesawat</a>
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">Hotel</a>
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">Rental Mobil</a>
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">Asuransi Perjalanan</a>
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">Paket Honeymoon</a>
+          </div>
+        </div>
+
+        <!-- Links Bantuan -->
+        <div class="lg:col-span-2 flex flex-col gap-6">
+          <h4 class="text-[17px] font-bold text-[#1a202c]">Bantuan</h4>
+          <div class="flex flex-col gap-5">
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">FAQ</a>
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">Cara Pemesanan</a>
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">Pembayaran</a>
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">Kebijakan Kami</a>
+            <a href="#" class="text-[15px] font-medium text-slate-400 hover:text-ocean-600 transition-colors">Syarat Ketentuan</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
 
   <!-- JAVASCRIPT -->
   <script src="js/main.js"></script>
