@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SustaGo</title>
-  <script src="js/tailwind.config.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link
@@ -13,16 +12,17 @@
     rel="stylesheet" />
 
   <link rel="stylesheet" href="styles/main.css" />
+  <script src="js/tailwind.config.js"></script>
 </head>
 
 <body class="bg-[#f7fbff]">
   <!-- NAVBAR -->
   <section id="navbar"
-    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-xl border-b border-slate-100">
-    <div class="px-5 mx-auto max-w-[92%] lg:max-w-[1440px]">
-      <div class="flex items-center justify-between h-20 lg:h-24">
+    class="fixed z-50 transition-all duration-300 bg-white/95 backdrop-blur-xl border border-slate-100">
+    <div class="navbar-content px-5 mx-auto">
+      <div class="navbar-inner flex items-center justify-between h-16 lg:h-[70px]">
         <a href="#hero" class="flex items-center flex-shrink-0">
-          <img src="assets/img/logo3.svg" alt="Sustago Logo" class="h-12 lg:h-14" />
+          <img src="assets/img/logo3.svg" alt="Sustago Logo" class="h-8 lg:h-9" />
         </a>
 
         <div class="items-center hidden gap-9 text-sm lg:flex">
@@ -57,7 +57,7 @@
     </div>
 
     <div id="mobile-menu"
-      class="absolute top-20 left-0 right-0 z-40 flex-col gap-2 px-6 py-4 bg-white border-b border-slate-100 shadow-lg lg:hidden">
+      class="absolute top-16 left-0 right-0 z-40 flex-col gap-2 px-6 py-4 bg-white border-b border-slate-100 shadow-lg lg:hidden">
       <a href="#hero" class="block py-3 text-base font-semibold text-ocean-900 border-b border-slate-50">Beranda</a>
       <a href="#explorer" class="block py-3 text-base font-medium text-slate-600 border-b border-slate-50">Eco Explorer</a>
       <a href="#umkm" class="block py-3 text-base font-medium text-slate-600 border-b border-slate-50">UMKM Lokal</a>
@@ -73,33 +73,33 @@
 
   <main class="page-shell mx-auto mt-4 mb-10 max-w-[92%] lg:max-w-[1440px] overflow-hidden bg-white shadow-[0_24px_80px_rgba(15,32,68,0.08)]">
     <!-- HERO SECTION -->
-    <section id="hero" class="relative overflow-hidden pt-28 lg:pt-36 bg-hero-soft">
+    <section id="hero" class="relative overflow-hidden pt-24 lg:pt-24 bg-hero-soft">
       <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-white"></div>
-      <div class="relative z-10 grid items-center gap-10 px-6 pb-24 sm:px-10 lg:grid-cols-2 lg:px-28">
+      <div class="relative z-10 grid items-center gap-7 px-6 pb-14 sm:px-10 lg:grid-cols-[0.96fr_1.04fr] lg:px-28">
         <div class="fade-up delay-1">
-          <div class="inline-flex items-center gap-2 px-4 py-2 mb-5 bg-white border border-ocean-100 rounded-full shadow-sm">
+          <div class="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-white border border-ocean-100 rounded-full shadow-sm">
             <i class="text-xs fa-solid fa-seedling text-eco-600"></i>
             <span class="text-xs font-bold text-ocean-700">Smart Destination for a Better Tomorrow</span>
           </div>
 
-          <h1 class="font-heading text-4xl sm:text-5xl lg:text-[4.7rem] font-extrabold text-ocean-900 leading-[1.02] mb-6 tracking-tight">
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.55rem] font-extrabold text-ocean-900 leading-[1.05] mb-4 tracking-tight">
             Pilih Destinasi<br />
-            yang Benar-Benar<br />
+            yang Benar-Benar<br class="hidden sm:block" />
             <span class="hl text-blue-600">Berkelanjutan</span>
           </h1>
 
-          <p class="max-w-xl mb-8 text-base font-medium leading-relaxed text-slate-700 sm:text-lg">
+          <p class="max-w-[520px] mb-6 text-sm sm:text-base font-semibold leading-relaxed text-slate-700">
             Sustago membantu wisatawan menemukan destinasi dengan Eco-Score transparan, mendukung UMKM lokal,
             dan mengubah ulasan perjalanan menjadi data keberlanjutan yang dapat dipantau.
           </p>
 
           <div class="flex flex-col gap-3 sm:flex-row">
             <a href="#explorer"
-              class="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white transition-all duration-300 rounded-xl bg-ocean-900 hover:bg-ocean-800 shadow-lg shadow-ocean-900/20">
+              class="inline-flex items-center justify-center px-7 py-3.5 text-sm font-bold text-white transition-all duration-300 rounded-xl bg-ocean-900 hover:bg-ocean-800 shadow-lg shadow-ocean-900/20">
               Coba Eco Explorer
             </a>
             <a href="#workflow"
-              class="inline-flex items-center justify-center gap-3 px-8 py-4 text-sm font-bold transition-all duration-300 bg-white border border-ocean-100 rounded-xl text-ocean-900 hover:border-ocean-300 hover:bg-ocean-50">
+              class="inline-flex items-center justify-center gap-3 px-7 py-3.5 text-sm font-bold transition-all duration-300 bg-white border border-ocean-100 rounded-xl text-ocean-900 hover:border-ocean-300 hover:bg-ocean-50">
               Lihat Cara Kerja
               <span class="flex items-center justify-center w-6 h-6 rounded-full bg-ocean-50 text-ocean-600">
                 <i class="text-xs fa-solid fa-arrow-right"></i>
@@ -108,41 +108,15 @@
           </div>
         </div>
 
-        <div class="relative flex items-center justify-center min-h-[420px] fade-up delay-2">
-          <img src="assets/img/globe 1.svg" alt="Smart destination globe"
-            class="relative z-10 w-[360px] sm:w-[460px] lg:w-[570px] globe" />
-          <div class="absolute left-4 top-24 hidden lg:block">
-            <div class="w-16 h-16 rounded-full bg-eco-100 shadow-lg flex items-center justify-center">
-              <i class="text-3xl fa-solid fa-seedling text-eco-600"></i>
-            </div>
-          </div>
-          <div
-            class="absolute right-4 bottom-14 z-20 w-44 rounded-2xl border border-slate-100 bg-white p-5 shadow-[0_18px_50px_rgba(15,32,68,0.16)]">
-            <p class="text-xs font-extrabold text-ocean-700">Eco Score</p>
-            <div class="flex items-end gap-3 mt-2">
-              <p class="text-5xl font-extrabold leading-none text-ocean-900">8.6</p>
-              <i class="mb-1 text-3xl fa-solid fa-leaf text-eco-600"></i>
-            </div>
-            <p class="mt-2 text-sm font-bold text-eco-600">Sangat Baik</p>
-            <div class="h-2 mt-3 overflow-hidden rounded-full bg-slate-100">
-              <div class="h-full rounded-full bg-eco-500 w-[86%]"></div>
-            </div>
-          </div>
-          <div class="absolute left-16 bottom-16 hidden sm:block">
-            <div class="flex items-center gap-3 px-4 py-3 bg-white border border-slate-100 rounded-2xl shadow-lg">
-              <i class="text-2xl fa-solid fa-suitcase-rolling text-accent-500"></i>
-              <div>
-                <p class="text-xs font-bold text-slate-400">UMKM sekitar</p>
-                <p class="text-sm font-extrabold text-ocean-900">12 rekomendasi</p>
-              </div>
-            </div>
-          </div>
+        <div class="relative flex items-center justify-center min-h-[280px] lg:min-h-[350px] fade-up delay-2">
+          <img src="assets/generated/hero-sustago-3d.png" alt="Smart destination hero"
+            class="hero-asset relative z-10 w-full max-w-[540px] xl:max-w-[590px]" />
         </div>
       </div>
     </section>
 
     <!-- EXPLORER -->
-    <section id="explorer" class="relative z-20 px-6 -mt-12 sm:px-10 lg:px-28">
+    <section id="explorer" class="relative z-20 px-6 -mt-8 sm:px-10 lg:px-28">
       <div class="scroll-reveal bg-white rounded-2xl shadow-[0_18px_50px_rgba(15,32,68,0.12)] border border-slate-100 p-4 lg:p-5">
         <div class="grid gap-3 lg:grid-cols-[1.3fr_1fr_1fr_1fr_auto]">
           <div class="explorer-field">
@@ -184,7 +158,7 @@
     </section>
 
     <!-- STATS -->
-    <section id="stats" class="px-6 py-9 sm:px-10 lg:px-28">
+    <section id="stats" class="px-6 py-6 sm:px-10 lg:px-28">
       <div class="scroll-reveal grid grid-cols-2 gap-5 lg:grid-cols-4">
         <div class="stat-compact">
           <span class="stat-icon"><img src="assets/img/bus.svg" alt="Destinasi Eco" /></span>
@@ -218,67 +192,81 @@
     </section>
 
     <!-- PROBLEM -->
-    <section id="problem" class="px-6 pb-10 sm:px-10 lg:px-28">
+    <section id="problem" class="px-6 pb-8 sm:px-10 lg:px-28">
       <div class="section-heading scroll-reveal">
         <h2>Mengapa Sustago?</h2>
         <p>Masalah besar yang ingin kita ubah bersama.</p>
       </div>
-      <div class="grid gap-5 mt-6 lg:grid-cols-3">
-        <div class="soft-card scroll-reveal">
-          <div class="problem-icon bg-eco-100 text-eco-600">
+      <div class="grid gap-5 mt-5 lg:grid-cols-3">
+        <div class="problem-card scroll-reveal">
+          <div class="problem-icon problem-eco">
             <i class="fa-solid fa-leaf"></i>
           </div>
-          <h3>Greenwashing Masih Banyak</h3>
-          <p>Sulit membedakan destinasi yang benar-benar berkelanjutan dari klaim hijau tanpa bukti.</p>
+          <div>
+            <h3>Greenwashing Masih Banyak</h3>
+            <p>Sulit membedakan destinasi yang benar-benar berkelanjutan.</p>
+          </div>
         </div>
-        <div class="soft-card scroll-reveal">
-          <div class="problem-icon bg-blue-100 text-blue-600">
+        <div class="problem-card scroll-reveal">
+          <div class="problem-icon problem-store">
             <i class="fa-solid fa-store"></i>
           </div>
-          <h3>Ekonomi Lokal Terabaikan</h3>
-          <p>Dana wisata sering keluar dari daerah, sementara UMKM lokal mendapat manfaat minim.</p>
+          <div>
+            <h3>Ekonomi Lokal Terabaikan</h3>
+            <p>Dana wisata sering keluar dari daerah, UMKM lokal mendapat manfaat minim.</p>
+          </div>
         </div>
-        <div class="soft-card scroll-reveal">
-          <div class="problem-icon bg-orange-100 text-orange-500">
+        <div class="problem-card scroll-reveal">
+          <div class="problem-icon problem-data">
             <i class="fa-solid fa-chart-pie"></i>
           </div>
-          <h3>Data & Transparansi Minim</h3>
-          <p>Pengelola butuh data akurat untuk perbaikan destinasi yang berkelanjutan.</p>
+          <div>
+            <h3>Data & Transparansi Minim</h3>
+            <p>Pengelola butuh data akurat untuk perbaikan berkelanjutan.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- WORKFLOW -->
-    <section id="workflow" class="px-6 py-8 sm:px-10 lg:px-28">
+    <section id="workflow" class="px-6 py-7 sm:px-10 lg:px-28">
       <div class="section-heading scroll-reveal">
         <h2>Bagaimana Sustago Bekerja?</h2>
       </div>
-      <div class="scroll-reveal grid gap-5 mt-7 lg:grid-cols-4">
+      <div class="workflow-track scroll-reveal mt-6">
         <div class="workflow-step">
           <span><i class="fa-solid fa-magnifying-glass-chart"></i></span>
-          <h3>1. Cari & Bandingkan</h3>
-          <p>Temukan destinasi dengan Eco-Score transparan.</p>
+          <div>
+            <h3>1. Cari & Bandingkan</h3>
+            <p>Temukan destinasi dengan Eco-Score transparan.</p>
+          </div>
         </div>
         <div class="workflow-step">
           <span><i class="fa-solid fa-store"></i></span>
-          <h3>2. Dukung UMKM Lokal</h3>
-          <p>Pilih produk, kuliner, dan layanan lokal di sekitar destinasi.</p>
+          <div>
+            <h3>2. Dukung UMKM Lokal</h3>
+            <p>Pilih produk, kuliner, dan layanan lokal di sekitar destinasi.</p>
+          </div>
         </div>
         <div class="workflow-step">
           <span><i class="fa-solid fa-star-half-stroke"></i></span>
-          <h3>3. Beri Eco Rating</h3>
-          <p>Bagikan pengalaman dan nilai dampak lingkungan & sosial.</p>
+          <div>
+            <h3>3. Beri Eco Rating</h3>
+            <p>Bagikan pengalaman dan nilai dampak lingkungan & sosial.</p>
+          </div>
         </div>
         <div class="workflow-step">
           <span><i class="fa-solid fa-chart-line"></i></span>
-          <h3>4. Data Jadi Dampak</h3>
-          <p>Feedback diolah menjadi insight untuk pengelola & pemerintah.</p>
+          <div>
+            <h3>4. Data Jadi Dampak</h3>
+            <p>Feedback diolah jadi insight untuk pengelola & pemerintah.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- DESTINASI -->
-    <section id="destinasi" class="px-6 py-10 sm:px-10 lg:px-28">
+    <section id="destinasi" class="px-6 py-8 sm:px-10 lg:px-28">
       <div class="flex items-center justify-between gap-4 mb-6 scroll-reveal">
         <div class="section-heading mb-0">
           <h2>Destinasi dengan Eco-Score Terbaik</h2>
@@ -342,7 +330,7 @@
     </section>
 
     <!-- UMKM -->
-    <section id="umkm" class="px-6 py-10 sm:px-10 lg:px-28 bg-gradient-to-br from-eco-100/45 via-white to-blue-50">
+    <section id="umkm" class="px-6 py-8 sm:px-10 lg:px-28 bg-gradient-to-br from-eco-100/45 via-white to-blue-50">
       <div class="flex items-center justify-between gap-4 mb-6 scroll-reveal">
         <div class="section-heading mb-0">
           <h2>Dukung UMKM Lokal di Sekitar Destinasi</h2>
@@ -386,30 +374,34 @@
     </section>
 
     <!-- RATING -->
-    <section id="rating" class="px-6 py-10 sm:px-10 lg:px-28">
+    <section id="rating" class="px-6 py-8 sm:px-10 lg:px-28">
       <div class="section-heading scroll-reveal">
         <h2>Beri Eco Rating, Ulasanmu Berdampak</h2>
       </div>
-      <div class="grid gap-6 mt-6 lg:grid-cols-[1.05fr_1.35fr]">
-        <div class="soft-card scroll-reveal">
-          <div class="space-y-3">
-            <div class="rating-row"><span><i class="fa-solid fa-trash-can text-blue-500"></i> Kebersihan & Sampah</span><strong>★★★★★</strong></div>
-            <div class="rating-row"><span><i class="fa-solid fa-leaf text-eco-600"></i> Konservasi Alam</span><strong>★★★★☆</strong></div>
-            <div class="rating-row"><span><i class="fa-solid fa-people-group text-blue-500"></i> Dampak ke Masyarakat Lokal</span><strong>★★★★★</strong></div>
-            <div class="rating-row"><span><i class="fa-solid fa-bus text-eco-600"></i> Transportasi Ramah Lingkungan</span><strong>★★★★☆</strong></div>
-            <div class="rating-row"><span><i class="fa-solid fa-shield-heart text-accent-500"></i> Pengalaman Edukasi</span><strong>★★★★☆</strong></div>
-          </div>
-          <div class="mt-7 flex items-center justify-between gap-5 rounded-2xl bg-ocean-50 p-5">
-            <div>
-              <p class="text-xs font-extrabold text-slate-500">Eco Score Anda</p>
-              <p class="text-6xl font-extrabold text-ocean-900">8.4</p>
-              <p class="text-xs font-semibold text-slate-500">Sangat Baik</p>
+      <div class="grid gap-6 mt-5 lg:grid-cols-[1.06fr_1.34fr]">
+        <div class="rating-panel scroll-reveal">
+          <div>
+            <p class="rating-kicker"><i class="fa-solid fa-caret-right"></i> Aspek Penilaian</p>
+            <div class="space-y-3 mt-3">
+              <div class="rating-row"><span><i class="fa-solid fa-trash-can text-blue-500"></i> Kebersihan & Sampah</span><strong>★★★★★</strong></div>
+              <div class="rating-row"><span><i class="fa-solid fa-leaf text-eco-600"></i> Konservasi Alam</span><strong>★★★★☆</strong></div>
+              <div class="rating-row"><span><i class="fa-solid fa-people-group text-blue-500"></i> Dampak ke Masyarakat Lokal</span><strong>★★★★★</strong></div>
+              <div class="rating-row"><span><i class="fa-solid fa-bus text-eco-600"></i> Transportasi Ramah Lingkungan</span><strong>★★★★☆</strong></div>
+              <div class="rating-row"><span><i class="fa-solid fa-shield-heart text-accent-500"></i> Pengalaman Edukasi</span><strong>★★★★☆</strong></div>
             </div>
-            <i class="text-6xl fa-solid fa-leaf text-eco-600"></i>
+          </div>
+          <div class="score-result">
+            <p>Eco Score Anda</p>
+            <div class="flex items-center justify-center gap-3">
+              <strong>8.4</strong>
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <span>Sangat Baik</span>
+            <small>Terima kasih. Ulasan Anda membantu menjaga destinasi tetap lestari.</small>
           </div>
         </div>
 
-        <div class="soft-card scroll-reveal">
+        <div class="review-card scroll-reveal">
           <div class="flex items-start justify-between gap-4">
             <div class="flex items-center gap-3">
               <img src="assets/img/Orang.svg" alt="Reviewer" class="object-cover w-12 h-12 rounded-full bg-ocean-50" />
@@ -434,7 +426,7 @@
     </section>
 
     <!-- IMPACT -->
-    <section id="impact" class="px-6 py-10 sm:px-10 lg:px-28">
+    <section id="impact" class="px-6 py-8 sm:px-10 lg:px-28">
       <div class="section-heading scroll-reveal">
         <h2>Dampak Nyata dari Setiap Perjalanan</h2>
       </div>
@@ -471,22 +463,22 @@
     </section>
 
     <!-- SDGS -->
-    <section id="sdgs" class="px-6 py-10 sm:px-10 lg:px-28">
+    <section id="sdgs" class="px-6 py-8 sm:px-10 lg:px-28">
       <div class="section-heading scroll-reveal">
         <h2>Sustago Mendukung Tujuan Pembangunan Berkelanjutan</h2>
       </div>
-      <div class="scroll-reveal mt-6 grid gap-4 lg:grid-cols-[1.5fr_1fr]">
-        <div class="grid grid-cols-4 gap-3 sm:grid-cols-8">
-          <div class="sdg-box bg-red-600">4</div>
-          <div class="sdg-box bg-pink-600">8</div>
-          <div class="sdg-box bg-orange-500">11</div>
-          <div class="sdg-box bg-yellow-500">12</div>
-          <div class="sdg-box bg-green-600">13</div>
-          <div class="sdg-box bg-sky-500">14</div>
-          <div class="sdg-box bg-emerald-600">15</div>
-          <div class="sdg-box bg-blue-800">17</div>
+      <div class="scroll-reveal mt-5 grid gap-5 lg:grid-cols-[1.45fr_1fr]">
+        <div class="sdg-strip">
+          <div class="sdg-box bg-red-600"><strong>4</strong><span>Quality<br />Education</span></div>
+          <div class="sdg-box bg-pink-600"><strong>8</strong><span>Economic<br />Growth</span></div>
+          <div class="sdg-box bg-orange-500"><strong>11</strong><span>Sustainable<br />Cities</span></div>
+          <div class="sdg-box bg-yellow-500"><strong>12</strong><span>Responsible<br />Consumption</span></div>
+          <div class="sdg-box bg-green-600"><strong>13</strong><span>Climate<br />Action</span></div>
+          <div class="sdg-box bg-sky-500"><strong>14</strong><span>Life Below<br />Water</span></div>
+          <div class="sdg-box bg-emerald-600"><strong>15</strong><span>Life on<br />Land</span></div>
+          <div class="sdg-box bg-blue-800"><strong>17</strong><span>Partnerships</span></div>
         </div>
-        <div class="grid grid-cols-3 gap-3">
+        <div class="partner-strip">
           <div class="partner-box">Wonderful<br />Indonesia</div>
           <div class="partner-box">ASEAN<br />Tourism</div>
           <div class="partner-box">BAPPENAS</div>
@@ -495,7 +487,7 @@
     </section>
 
     <!-- ARTIKEL -->
-    <section id="artikel" class="px-6 py-10 sm:px-10 lg:px-28">
+    <section id="artikel" class="px-6 py-8 sm:px-10 lg:px-28">
       <div class="flex items-center justify-between gap-4 mb-6 scroll-reveal">
         <div class="section-heading mb-0">
           <h2>Artikel & Inspirasi</h2>
@@ -537,7 +529,7 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="px-6 py-12 sm:px-10 lg:px-28">
+    <section id="faq" class="px-6 py-8 sm:px-10 lg:px-28">
       <div class="section-heading scroll-reveal">
         <h2>Pertanyaan Yang Sering Diajukan</h2>
       </div>

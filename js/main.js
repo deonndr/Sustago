@@ -33,13 +33,16 @@ document.querySelectorAll('.pill-active, .pill-inactive').forEach(btn => {
 
 const navbar = document.getElementById('navbar');
 if (navbar) {
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
+  const syncNavbarState = () => {
+    if (window.scrollY > 8) {
       navbar.classList.add('nav-scrolled');
     } else {
       navbar.classList.remove('nav-scrolled');
     }
-  });
+  };
+
+  syncNavbarState();
+  window.addEventListener('scroll', syncNavbarState, { passive: true });
 }
 
 // Code navbar aktif
