@@ -3,18 +3,20 @@
 const hamburger = document.getElementById('hamburger-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('is-open');
-});
-
-// code saat burger button di close
-mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    hamburger.classList.remove('is-open');
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('is-open');
   });
-});
+
+  // code saat burger button di close
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('is-open');
+    });
+  });
+}
 
 
 
@@ -30,16 +32,18 @@ document.querySelectorAll('.pill-active, .pill-inactive').forEach(btn => {
 });
 
 const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) {
-    navbar.classList.add('nav-scrolled');
-  } else {
-    navbar.classList.remove('nav-scrolled');
-  }
-});
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      navbar.classList.add('nav-scrolled');
+    } else {
+      navbar.classList.remove('nav-scrolled');
+    }
+  });
+}
 
 // Code navbar aktif
-const sections = document.querySelectorAll('section[id]');
+const sections = document.querySelectorAll('main section[id]');
 window.addEventListener('scroll', () => {
   let current = '';
 
@@ -122,26 +126,29 @@ faqToggles.forEach(toggle => {
         const otherIcon = otherToggle.querySelector('.faq-icon');
 
         otherToggle.dataset.active = 'false';
-        otherContent.style.maxHeight = '0';
-        otherIcon.textContent = '+';
-        otherIcon.classList.remove('bg-[#4F6BF0]', 'text-white');
-        otherIcon.classList.add('bg-slate-200', 'text-slate-600');
+        if (otherContent && otherIcon) {
+          otherContent.style.maxHeight = '0';
+          otherIcon.textContent = '+';
+          otherIcon.classList.remove('is-active');
+        }
       }
     });
 
     // Toggle pertanyaan yang diklik
     if (isActive) {
       toggle.dataset.active = 'false';
-      content.style.maxHeight = '0';
-      icon.textContent = '+';
-      icon.classList.remove('bg-[#4F6BF0]', 'text-white');
-      icon.classList.add('bg-slate-200', 'text-slate-600');
+      if (content && icon) {
+        content.style.maxHeight = '0';
+        icon.textContent = '+';
+        icon.classList.remove('is-active');
+      }
     } else {
       toggle.dataset.active = 'true';
-      content.style.maxHeight = content.scrollHeight + 'px';
-      icon.textContent = '−';
-      icon.classList.remove('bg-slate-200', 'text-slate-600');
-      icon.classList.add('bg-[#4F6BF0]', 'text-white');
+      if (content && icon) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        icon.textContent = '−';
+        icon.classList.add('is-active');
+      }
     }
   });
 });
