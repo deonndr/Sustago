@@ -168,30 +168,6 @@ html {
   }
 }
 
-/* animasi garis bawah di teks "Dukung Lokal" di hero section */ 
- .hl {
-  position: relative;
-  display: inline-block;
-}
-
-.hl::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -9px;
-  height: 5px;
-  background: #16a34a;
-  border-radius: 2px;
-  transform-origin: left center;
-  animation: bar 0.5s 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-@keyframes bar {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
-}
-
 /* animasi goyang hero image */
 .globe {
   animation: float 3s ease-in-out infinite;
@@ -205,8 +181,12 @@ html {
   }
 }
 
-/* code nyembunyyin scrollbar di carousel destinasi populer */
-#dest-carousel::-webkit-scrollbar {
+/* code nyembunyyin scrollbar */
+.hide-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scroll::-webkit-scrollbar {
   display: none;
 }
 
