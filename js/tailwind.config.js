@@ -16,6 +16,7 @@ tailwind.config = {
           50:  '#f0f7ff',
         },
         accent: {
+          600: '#94A3B8',
           500: '#f59e0b',
           400: '#fbbf24',
         },
