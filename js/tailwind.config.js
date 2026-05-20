@@ -3,16 +3,16 @@ tailwind.config = {
     extend: {
       colors: {
         ocean: {
-          950: '#0a1628',
-          900: '#0f2044',
+          950: '#001B50',
+          900: '#001B50',
           800: '#1a3460',
           700: '#1e4080',
-          600: '#1e56a0',
-          500: '#2271c3',
+          600: '#6282ED',
+          500: '#6282ED',
           400: '#4a90d9',
           300: '#7ab3e8',
-          200: '#b3d4f5',
-          100: '#deeeff',
+          200: '#C3E8FF',
+          100: '#E0F2FE',
           50:  '#f0f7ff',
         },
         accent: {
@@ -24,7 +24,8 @@ tailwind.config = {
           600: '#16a34a',
           500: '#22c55e',
           100: '#dcfce7',
-        }
+        },
+        label: '#94A3B8'
       },
       fontFamily: {
         heading: ['"Plus Jakarta Sans"', 'sans-serif'],

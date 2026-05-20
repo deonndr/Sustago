@@ -124,7 +124,7 @@ faqToggles.forEach(toggle => {
         otherToggle.dataset.active = 'false';
         otherContent.style.maxHeight = '0';
         otherIcon.textContent = '+';
-        otherIcon.classList.remove('bg-[#4F6BF0]', 'text-white');
+        otherIcon.classList.remove('bg-[#6282ED]', 'text-white');
         otherIcon.classList.add('bg-slate-200', 'text-slate-600');
       }
     });
@@ -134,14 +134,14 @@ faqToggles.forEach(toggle => {
       toggle.dataset.active = 'false';
       content.style.maxHeight = '0';
       icon.textContent = '+';
-      icon.classList.remove('bg-[#4F6BF0]', 'text-white');
+      icon.classList.remove('bg-[#6282ED]', 'text-white');
       icon.classList.add('bg-slate-200', 'text-slate-600');
     } else {
       toggle.dataset.active = 'true';
       content.style.maxHeight = content.scrollHeight + 'px';
       icon.textContent = '−';
       icon.classList.remove('bg-slate-200', 'text-slate-600');
-      icon.classList.add('bg-[#4F6BF0]', 'text-white');
+      icon.classList.add('bg-[#6282ED]', 'text-white');
     }
   });
 });
