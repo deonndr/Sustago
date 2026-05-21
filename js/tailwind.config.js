@@ -25,7 +25,7 @@ tailwind.config = {
           500: '#22c55e',
           100: '#dcfce7',
         },
-        label: '#94A3B8'
+        label: '#1a3460'
       },
       fontFamily: {
         heading: ['"Plus Jakarta Sans"', 'sans-serif'],

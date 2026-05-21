@@ -18,17 +18,6 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 
 
 
-document.querySelectorAll('.pill-active, .pill-inactive').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.pill-active, .pill-inactive').forEach(b => {
-      b.classList.remove('pill-active');
-      b.classList.add('pill-inactive');
-    });
-    btn.classList.remove('pill-inactive');
-    btn.classList.add('pill-active');
-  });
-});
-
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 10) {
@@ -71,22 +60,7 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// Buat gerakin carousel nya
-const destCarousel = document.getElementById('dest-carousel');
-const destPrev = document.getElementById('dest-prev');
-const destNext = document.getElementById('dest-next');
 
-if (destCarousel && destPrev && destNext) {
-  const scrollAmount = 320;
-
-  destPrev.addEventListener('click', () => {
-    destCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-  });
-
-  destNext.addEventListener('click', () => {
-    destCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  });
-}
 
 // Animasi reveal pas scroll
 const revealElements = document.querySelectorAll('.scroll-reveal');
@@ -124,8 +98,8 @@ faqToggles.forEach(toggle => {
         otherToggle.dataset.active = 'false';
         otherContent.style.maxHeight = '0';
         otherIcon.textContent = '+';
-        otherIcon.classList.remove('bg-[#6282ED]', 'text-white');
-        otherIcon.classList.add('bg-slate-200', 'text-slate-600');
+        otherIcon.classList.remove('bg-ocean-600', 'text-white');
+        otherIcon.classList.add('bg-ocean-200', 'text-label');
       }
     });
 
@@ -134,14 +108,14 @@ faqToggles.forEach(toggle => {
       toggle.dataset.active = 'false';
       content.style.maxHeight = '0';
       icon.textContent = '+';
-      icon.classList.remove('bg-[#6282ED]', 'text-white');
-      icon.classList.add('bg-slate-200', 'text-slate-600');
+      icon.classList.remove('bg-ocean-600', 'text-white');
+      icon.classList.add('bg-ocean-200', 'text-label');
     } else {
       toggle.dataset.active = 'true';
       content.style.maxHeight = content.scrollHeight + 'px';
       icon.textContent = '−';
-      icon.classList.remove('bg-slate-200', 'text-slate-600');
-      icon.classList.add('bg-[#6282ED]', 'text-white');
+      icon.classList.remove('bg-ocean-200', 'text-label');
+      icon.classList.add('bg-ocean-600', 'text-white');
     }
   });
 });

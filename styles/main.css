@@ -14,23 +14,7 @@ body {
   box-shadow: 0 2px 20px rgba(10, 22, 40, 0.08);
 }
 
-/* Stat item */
-.stat-item {
-  border-right: 1px solid #e2eaf4;
-}
 
-.stat-item:last-child {
-  border-right: none;
-}
-
-.cta-bg {
-  background: linear-gradient(135deg, #001B50 0%, #6282ED 55%, #6282ED 100%);
-}
-
-/* Feature icon wrapper */
-.feat-icon {
-  background: linear-gradient(135deg, #deeeff 0%, #b3d4f5 100%);
-}
 
 /* Navbar mobile toggle */
 #mobile-menu {
@@ -67,16 +51,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Pill active */
-.pill-active {
-  background: #6282ED;
-  color: #fff;
-}
 
-.pill-inactive {
-  background: #f0f7ff;
-  color: #001B50;
-}
 
 /* Animation */
 @keyframes fadeUp {
@@ -149,18 +124,7 @@ html {
   }
 }
 
-/* animasi goyang hero image */
-.globe {
-  animation: float 3s ease-in-out infinite;
-}
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
+
 
 /* code nyembunyyin scrollbar */
 .hide-scroll {
